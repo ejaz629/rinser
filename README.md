@@ -1,2 +1,3 @@
-# rinser
-Prediction of Windows API names from disassemblies using transfer learning.
+# RINSER
+
+We present a fast and accurate Windows API prediction system called RINSER (AccuRate API Name prediction uSing transfEr leaRning). 
