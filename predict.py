@@ -6,35 +6,15 @@ import json
 import ast
 import torch
 
-
-# # tokenizer = AutoTokenizer.from_pretrained(r'D:/work/myworkspace/asmbert/pretrained-bert/')
-# # model = DistilBertForSequenceClassification.from_pretrained(r'D:/work/myworkspace/asmbert/pretrained-bert/')
-#
-#
-# # when you load from pretrained
-# #model = BertForMaskedLM.from_pretrained(os.path.join(r'D:/work/myworkspace/asmbert/pretrained-bert/checkpoint-4200'))
-# #tokenizer = BertTokenizerFast.from_pretrained(r'D:/work/myworkspace/asmbert/pretrained-bert')
-#
-model = BertForMaskedLM.from_pretrained(os.path.join(r'rinser-llm/checkpoint-28700'))
-tokenizer = BertTokenizerFast.from_pretrained(r'rinser-llm')
-fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
-
-# print("I'm Here!!!!")
-
-# file = open(r'processed-dataset/test_with_annot.txt', "r", encoding="utf8")
-# examples = file.read().split('\n')
-# file.close()
-
-# for ex in examples:
-#     print(ex.split(' '))
-#     break
-
 apilist = []
 count = 0
 cor = 0
 cor_context = 0
 tot_count = 0
 
+model = BertForMaskedLM.from_pretrained(os.path.join(r'rinser-llm/checkpoint-28700'))
+tokenizer = BertTokenizerFast.from_pretrained(r'rinser-llm')
+fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
 
 def predict_api(test_api, fill_mask):
     corr = False
@@ -55,8 +35,6 @@ def predict_api(test_api, fill_mask):
             corr = True
             break
     return actual, predicted, corr, contxt_res, valid_input
-
-
 
 with open(r'api-codeprints-for-llm/test_for_rinser_llm.txt', "r", encoding="utf8") as f:
     for line in f:
@@ -87,23 +65,3 @@ print("Test API codeprints: ", count)
 print("Correct predictions: ", cor)
 print("Prediction accuracy (%): ", cor / count)
 print("Total unique APIs predicted correctly: ", len(set(apilist)))
-
-
-
-# # perform predictions
-# example = "add esp, [MASK]"   #getosfhandle filehandle
-# for prediction in fill_mask(example):
-#   print(prediction)
-#   print("here")
-#
-# # perform predictions
-# examples = [
-#   "fileno [MASK]", #fileno stream
-#   "writefile hfile lpbuffer nnumberofbytestowrite [MASK] lpoverlapped",
-# ]
-
-# for example in examples:
-#   for prediction in fill_mask(example):
-#     print(f"{prediction['sequence']}, confidence: {prediction['score']}")
-#   print("="*50)
-
