@@ -11,4 +11,4 @@ nltk
 transformers
 tokenizers version 0.13.3
 Xformers
-In addition, you need rinser-llm files to be available in the main folder.
+In addition, you need rinser-llm pretrained model to be available in the main folder.
