@@ -1,0 +1,14 @@
+1. First you need to add IDA path environment variable in the main directory in order to use idat64 tool automatically.
+
+
+2. Required packages for extracting API codeprints:
+conda
+pandas
+tqdm
+nltk
+
+3. Required for building and using RINSER-LLM model for inference.
+transformers
+tokenizers version 0.13.3
+Xformers
+
