@@ -1,0 +1,2509 @@
+winexec ucmdshow mem lpcmdline mem
+createfilea htemplatefile 0 dwflagsandattributes 80h dwcreationdisposition 2 lpsecurityattributes 0 dwsharemode 0 dwdesiredaccess mem lpfilename mem
+pathfileexistsa pszpath mem
+getmodulefilenamea lp push ebx test ebx ebx mov ebx mem mov eax mem mov mem eax call extrfun mov ebx maddr mov mem 0 mov mem 0 mov mem 0 mov ebp esp push ebp nsize maddr lpfilename mem hmodule mem
+gettickcount dwbytes saddr
+createdirectorya int laddr x push eax int 1 lp push ebx test ebx ebx mov ebx mem mov mem eax call extrfun push mem push mem mov mem eax call extrfun mov ebx maddr push eax lp push ebx test ebx ebx mov ebx mem call extrfun mov ebx mem mov mem eax call extrfun push mem push mem mov mem eax call extrfun mov ebx maddr push eax lp push ebx test ebx ebx mov ebx mem mov eax mem call extrfun mov ebx mem call extrfun mov ebx mem mov mem eax call extrfun push mem push mem mov mem eax call extrfun mov ebx maddr push eax lpsecurityattributes mem lppathname mem
+createdirectorya ptr lpsecurityattributes mem lppathname mem
+movefilea lp push ebx test ebx ebx mov ebx mem call extrfun cmp mem esp temporaryfile ptr lpnewfilename mem lpexistingfilename mem
+movefilea lp push ebx test ebx ebx mov ebx mem call extrfun cmp mem esp ptr temporaryfile ptr lpnewfilename mem lpexistingfilename mem
+cryptacquirecontexta dwflags laddr dwprovtype 1 szprovider ptr szcontainer ptr phprov push eax lea eax mem mov complex esp mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 mov mem 0 sub esp saddr mov ebp esp push ebp
+cryptacquirecontexta dwflags 0 dwprovtype 1 szprovider ptr szcontainer ptr phprov push eax lea eax mem mov complex esp cmp mem 0 mov mem eax add esp 4 call extrfun cmp complex esp
+cryptcreatehash phhash push eax lea eax mem mov complex esp mov eax ptr szprovider cmp mem 0 mov mem eax add esp 4 call extrfun cmp complex esp dwflags 0 hkey mem algid mem hprov mem
+cryptreleasecontext dwflags push eax lea eax mem mov mem eax mov eax 0 mov complex esp cmp mem 0 mov mem eax add esp 4 call extrfun cmp complex esp hprov push eax lea eax mem push eax lea eax mem mov mem eax mov eax 0 mov complex esp cmp mem 0 mov mem eax add esp 4 call extrfun cmp complex esp
+crypthashdata dwbytes push eax add eax 8 mov eax mem push eax test eax eax mov eax mem mov ebx mem mov eax ptr szprovider call extrfun cmp complex esp lp push ebx test ebx ebx mov ebx mem call extrfun mov eax mem mov ebx mem mov eax ptr szprovider call extrfun cmp complex esp dwflags 0 dwdatalen mem pbdata push eax add eax 8 test eax eax mov eax mem push mem mov complex esp mov mem eax add esp saddr call extrfun push eax mov eax ptr unknown ptr mov eax mem mov ebx mem mov mem eax pop eax add esp 4 call extrfun push ebx test ebx ebx mov ebx mem mov edi eax call extrfun push eax mov eax mem mov eax ptr szprovider call extrfun cmp complex esp hhash mem
+cryptdestroyhash hhash push eax lea eax mem mov complex esp cmp mem 0 mov mem eax add esp 4 call extrfun cmp complex esp
+cryptreleasecontext dwflags push eax lea eax mem mov mem eax mov eax 0 mov complex esp add esp 4 call extrfun cmp complex esp hprov push eax lea eax mem push eax lea eax mem mov mem eax mov eax 0 mov complex esp add esp 4 call extrfun cmp complex esp
+cryptgethashparam lp push ebx test ebx ebx mov ebx mem mov eax complex mov complex eax call extrfun mov ebx maddr push mem mov eax ptr szprovider call extrfun cmp complex esp dwflags 0 pdwdatalen push eax lea eax mem mov complex esp mov mem eax mov eax mem mov mem eax pop eax add esp 4 call extrfun mov ebx mem push eax mov eax complex mov complex eax add esp saddr call extrfun mov ebx maddr push mem mov eax ptr szprovider call extrfun cmp complex esp pbdata push eax add eax 8 test eax eax mov eax mem push eax lea eax mem mov complex esp mov mem eax mov eax mem mov mem eax pop eax add esp 4 call extrfun mov ebx mem push eax mov eax complex mov complex eax add esp saddr call extrfun mov ebx maddr push mem mov eax ptr szprovider call extrfun cmp complex esp dwparam 2 hhash mem
+cryptdestroyhash hhash push eax lea eax mem mov complex esp cmp mem 0 mov mem eax add esp 4 call extrfun cmp complex esp
+cryptreleasecontext dwflags push eax lea eax mem mov mem eax mov eax 0 mov complex esp add esp 4 call extrfun cmp complex esp hprov push eax lea eax mem push eax lea eax mem mov mem eax mov eax 0 mov complex esp add esp 4 call extrfun cmp complex esp
+cryptdestroyhash 0123456789abcdef ptr lp push ebx test ebx ebx mov ebx mem mov eax complex mov complex eax call extrfun mov ebx maddr mov eax ptr szprovider call extrfun cmp complex esp lp push ebx test ebx ebx mov ebx mem mov eax mem mov mem eax call extrfun mov ebx maddr push eax call extrfun fld qword ptr mem fstp qword ptr mem fild mem mov mem eax pop eax call extrfun mov ebx mem mov eax complex mov complex eax call extrfun mov ebx maddr mov eax ptr szprovider call extrfun cmp complex esp hhash push eax lea eax mem mov complex esp add esp saddr mov ebx mem mov al mem mov ebx mem mov mem ebx add ebx eax add esp 4 call extrfun cmp eax ecx pop ebx pop ecx call extrfun dec eax call extrfun fld mem fstp mem fld mem fstp mem fild dword ptr mem mov dword ptr mem eax add esp saddr call extrfun mov ebx maddr push mem push ecx push ebx call extrfun mov ebx mem mov mem ebx call extrfun call extrfun call extrfun fld qword ptr mem fstp qword ptr mem fild mem call extrfun mov ebx mem mov mem al call extrfun call extrfun call extrfun call extrfun mov ebx maddr call extrfun call extrfun call extrfun call extrfun call extrfun mov mem eax eax maddr mov ebx mem mov mem ebx call extrfun call extrfun call extrfun call extrfun mov ebx mem cmp ecx edx mov mem ecx push edx pop edx mov ecx 0 mov ebx eax lea eax mem push eax call extrfun fild mem mov mem eax pop eax call extrfun push ebx test ebx ebx mov eax mem mov mem eax add esp saddr call extrfun mov ebx maddr call extrfun fild mem mov mem eax call extrfun mov eax complex mov complex eax call extrfun mov ebx maddr mov eax ptr szprovider call extrfun cmp complex esp
+cryptreleasecontext dwflags push eax lea eax mem mov mem eax mov eax 0 mov complex esp add esp 4 call extrfun cmp complex esp hprov push eax lea eax mem push eax lea eax mem mov mem eax mov eax 0 mov complex esp add esp 4 call extrfun cmp complex esp
+createtoolhelp32snapshot dwbytes 28h dwbytes maddr th32processid 0 dwflags saddr
+process32first dwbytes maddr lppe push eax mov edi eax call extrfun push eax mov eax mem mov mem esp mov ebx mem mov mem ebx mov ebx mem mov eax 0 cmp mem 0 mov mem eax add esp 4 call extrfun cmp mem esp hsnapshot mem
+process32next dwbytes maddr lppe push eax mov edi eax call extrfun push eax mov eax mem mov mem esp mov eax 1 add esp 4 call extrfun cmp mem esp hsnapshot mem
+process32next dwbytes maddr lppe push eax mov edi eax call extrfun push eax mov eax mem mov mem esp mov eax 1 add esp 4 call extrfun cmp mem esp hsnapshot mem
+createprocessa dwbytes saddr dwbytes saddr dwbytes 48h dwbytes saddr dwbytes saddr dwbytes saddr dwbytes saddr lpprocessinformation mem dwbytes 44h lpstartupinfo push eax mov edi eax call extrfun push eax mov eax mem push mem mov mem esp mov ebx mem mov mem ebx add ebx saddr mov ebx mem mov dword ptr mem 1 add ebx saddr mov dword ptr mem saddr mov dword ptr mem saddr mov ebx mem mov ebx mem mov dword ptr mem 0 mov dword ptr mem 0 mov dword ptr mem 0 mov dword ptr mem 0 mov ebx eax mov mem eax add esp 4 call extrfun xor eax eax mov mem eax pop ebx call extrfun push ebx add ebx 4 call extrfun call extrfun mov mem eax call extrfun mov mem eax call extrfun mov mem eax call extrfun sub esp saddr mov ebp esp push ebp lpcurrentdirectory mem lpenvironment 0 dwcreationflags 80h binherithandles 0 lpthreadattributes mem lpprocessattributes mem lpcommandline mem lpapplicationname 0
+openprocess dwprocessid mem binherithandle 0 dwdesiredaccess 1
+terminateprocess uexitcode 0 hprocess mem
+getcurrentprocessid
+createwaitabletimera dwbytes 8 lptimername 0 bmanualreset 0 lptimerattributes 0
+setwaitabletimer fresume 0 lpargtocompletionroutine 0 pfncompletionroutine 0 lperiod 0 lpduetime mem htimer mem
+msgwaitformultipleobjects dwwakemask maddr dwmilliseconds laddr fwaitall 0 phandles push eax lea eax mem mov mem esp add esp 4 call extrfun cmp mem esp ncount 1
+rtlmovememory 24h
+rtlmovememory dwbytes 24h dwbytes 30h lp push ebx test ebx ebx mov ebx mem mov eax dword ptr complex mov dword ptr complex eax call extrfun mov ebx maddr push mem mov eax 0 cmp mem 0 call extrfun push dword ptr mem mov ebx dword ptr complex push eax lea eax mem lea eax mem mov dword ptr complex ebx add ebx 8 mov ebx mem mov ebx mem xor eax eax mov edi eax mov mem eax call extrfun mov ebx eax mov mem eax call extrfun mov mem 0 mov mem 0 mov mem 0 mov ebp esp push ebp 24h
+getprocessheap
+getmodulehandlea lpmodulename push eax test eax eax mov eax lpmodulename
+exitprocess uexitcode push eax mov eax mem test eax eax mov eax ptr call extrfun mov ebp esp push ebp
+wsprintfa program internal error number r ptr lpstr push eax lea eax complex push eax mov ecx mem cmp eax saddr test eax eax xor ecx ecx sub esp maddr mov eax mem
+messageboxa utype saddr error ptr lptext push ecx lea ecx complex add esp saddr hwnd 0
+getprocessheap
+heapalloc dwbytes push ecx mov ecx mem dwflags 8 hheap push eax mov hheap eax
+messageboxa utype saddr error ptr äú ptr hwnd push eax mov esi eax
+getprocessheap
+heaprealloc dwbytes push edx mov edx mem mov ecx mem lpmem push ecx test ecx ecx mov ecx mem dwflags 0 hheap push eax mov hheap eax
+heapalloc dwbytes push ecx mov ecx mem dwflags 8 hheap push eax
+isbadreadptr ucb 8 lp push esi cmp esi ptr cmp ptr esi call extrfun cmp esi laddr mov esi complex push esi
+heapfree lpmem push esi dwflags push eax test eax eax hheap push eax mov eax hheap push eax test eax eax
+sleep dwmilliseconds push eax mov eax mem
+createfilea htemplatefile 0 dwflagsandattributes 20h dwcreationdisposition 3 lpsecurityattributes 0 dwsharemode 3 dwdesiredaccess laddr lpfilename push eax mov eax mem
+getfilesize lpfilesizehigh push ecx lea ecx complex hfile push edi cmp edi laddr mov edi eax
+readfile dwbytes push edx lea edx mem mov ebx eax lpoverlapped 0 lpnumberofbytesread push eax lea eax complex mov esi eax add esp 4 call extrfun mov ebx eax nnumberofbytestoread push ebx call extrfun lea edx mem mov ebx eax lpbuffer push ecx lea ecx mem mov esi eax call extrfun mov ebx eax hfile push edi call extrfun
+closehandle hobject push edi
+safearraycreate rgsabound push edx lea edx complex mov mem edx mov edx mem mov word ptr mem 7 mov word ptr mem 9 mov word ptr mem laddr mov dword ptr complex 8 cmp word ptr complex 4 mov ecx complex mov mem eax mov eax mem mov mem edx mov edx mem mov mem edx mov edx mem mov mem edx mov ecx esi mov eax mem mov word ptr mem laddr cmp dword ptr mem 0 mov mem dx sbb edx edx neg edx mov word ptr mem saddr cmp ecx laddr cmp ecx laddr cmp ecx laddr cmp ecx laddr cmp ecx laddr test ecx laddr mov ecx mem lea eax mem lea eax mem mov ecx complex lea esi mem test eax eax xor ebx ebx shl edx 4 mov eax complex mov edx complex cdims 1 vt saddr
+sysallocstring lpmultibytestr push eax mov eax mem mov mem eax mov mem edi psz push edi mov edi eax call extrfun push eax mov eax mem mov mem eax mov mem edi
+safearraycreate lpmem push edi rgsabound push ecx lea ecx complex cmp dword ptr mem 0 mov ecx complex cmp ecx laddr cmp ecx laddr cmp ecx laddr mov mem ecx mov ecx mem mov eax mem mov word ptr mem 7 mov mem edx mov edx mem mov word ptr mem laddr mov mem eax mov eax mem mov edx mem mov word ptr mem 9 mov word ptr mem laddr mov dword ptr complex 8 cmp word ptr complex 4 mov word ptr mem laddr mov mem cx sbb ecx ecx neg ecx mov word ptr mem saddr mov dword ptr mem laddr cmp dword ptr mem 0 mov word ptr mem laddr cmp ecx laddr cmp ecx laddr cmp ecx laddr cmp ecx laddr cmp ecx laddr ecx laddr mov word ptr mem 4 mov mem edx mov edx mem mov word ptr mem 5 cmp ecx laddr cmp ecx laddr mov word ptr mem saddr mov word ptr mem 2 mov word ptr mem 3 cmp ecx laddr cmp ecx laddr cmp ecx laddr mov word ptr mem saddr add esp 4 call extrfun cdims 1 vt saddr
+sysallocstring lpmultibytestr push eax test eax eax mov eax mem mov mem eax mov mem edi add edi 8 psz push edi mov edi eax call extrfun push eax test eax eax mov eax mem mov mem eax mov mem edi add edi 8
+safearraydestroy lp push eax test eax eax mov eax mem mov eax mem mov eax mem cmp dword ptr mem laddr cmp eax laddr cmp eax maddr cmp eax 8 mov ax mem xor eax eax mov edi complex lea esi mem test edi edi shl eax 4 mov edx complex mov eax complex mov dword ptr complex eax lpwidecharstr push edx mov edx mem mov ecx mem call extrfun mov eax mem cmp eax laddr cmp eax maddr cmp eax 8 mov ax mem xor eax eax lea esi mem shl eax 4 mov edx complex test eax eax mov eax complex mov dword ptr complex eax psa push edx mov edx mem call extrfun push edx mov edx mem mov ecx mem call extrfun mov eax mem cmp eax laddr cmp eax maddr cmp eax 8 mov ax mem xor eax eax lea esi mem shl eax 4 mov edx complex test eax eax mov eax complex mov dword ptr complex eax
+loadtypelib lpmultibytestr push edx mov edx complex lpmultibytestr push eax cmp eax ebp mov eax complex mov complex ebp mov eax complex add esp saddr xor eax eax pop ebp mov mem ebp cmp esi ebp add esp 4 mov esi eax call extrfun mov edx complex mov mem ebp pptlib push eax lea eax complex mov ebx eax add esp 4 call extrfun push eax cmp eax ebp mov eax complex mov complex ebp mov eax complex add esp saddr pop ebx xor eax eax pop ebp mov mem ebp cmp esi ebp mov esi eax call extrfun mov edx complex mov mem ebp szfile push ebx mov ebx eax call extrfun push eax cmp eax ebp mov eax complex mov complex ebp mov eax complex add esp saddr pop ebx xor eax eax pop ebp mov mem ebp cmp esi ebp add esp 4 mov esi eax call extrfun mov edx complex mov mem ebp
+getuserdefaultlcid szname push esi
+lhashvalofnamesys lcid push eax syskind 1
+registertypelib szhelpdir 0 szfullpath push ebx ptlib push ecx mov ecx complex add esp 8
+clsidfromprogid lpmem push ebx lpmem push esi call extrfun lpclsid push edx lea edx complex add esp 4 call extrfun mov eax complex call extrfun lpszprogid push esi call extrfun push esi call extrfun
+clsidfromstring pclsid push eax lea eax complex mov mem eax cmp eax ebp lpsz push esi
+olerun punknown push edx mov edx complex
+variantclear lpwidecharstr push eax mov eax dword ptr complex cmp word ptr complex 8 pvarg push ecx lea ecx complex add esp 4 call extrfun mov eax dword ptr complex cmp word ptr complex 8
+varr8fromcy pdblout push ecx lea ecx mem mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex eax mov dword ptr mem edx mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex ecx mov dword ptr mem eax mov ecx dword ptr complex mov eax dword ptr complex fstp mem fld dword ptr complex fild dword ptr complex fild mem mov mem edx movsx edx word ptr complex mov mem ecx ecx maddr mov ecx dword ptr complex cmp eax saddr add eax laddr eax laddr mov eax dword ptr mem cyin push eax mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex eax mov dword ptr mem edx mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex ecx mov dword ptr mem eax mov ecx dword ptr complex mov eax dword ptr complex fstp mem fld dword ptr complex fild dword ptr complex fild mem mov mem edx movsx edx word ptr complex mov mem ecx ecx maddr mov ecx dword ptr complex cmp eax saddr add eax laddr eax laddr mov eax dword ptr mem
+varr8frombool pdblout push ecx lea ecx mem mov edx dword ptr complex fstp mem fild mem mov dword ptr mem eax mov dword ptr complex 0 mov eax dword ptr complex fild mem mov mem edx edx laddr mov edx dword ptr complex mov mem ecx movsx ecx byte ptr complex boolin push edx mov edx dword ptr complex fstp mem fild mem mov dword ptr mem eax mov dword ptr complex 0 mov eax dword ptr complex fild mem mov mem edx edx laddr mov edx dword ptr complex mov mem ecx movsx ecx byte ptr complex
+variantclear pvarg push eax lea eax mem mov dword ptr complex 0 mov dword ptr mem 0
+variantclear pvarg push ecx lea ecx complex cmp word ptr complex ax cmp word ptr complex saddr
+variantclear pvarg push edx lea edx complex
+variantclear pvarg push edx lea edx complex cmp word ptr complex 0
+varr8fromcy pdblout push ecx lea ecx mem mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex eax mov dword ptr mem edx mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex ecx mov dword ptr mem eax mov ecx dword ptr complex mov eax dword ptr complex fstp mem fld dword ptr complex fild dword ptr complex fild mem mov mem edx movsx edx word ptr complex mov mem ecx ecx maddr mov ecx dword ptr complex cmp eax saddr add eax laddr eax laddr mov eax dword ptr mem cyin push eax mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex eax mov dword ptr mem edx mov eax dword ptr complex mov edx dword ptr complex mov dword ptr complex ecx mov dword ptr mem eax mov ecx dword ptr complex mov eax dword ptr complex fstp mem fld dword ptr complex fild dword ptr complex fild mem mov mem edx movsx edx word ptr complex mov mem ecx ecx maddr mov ecx dword ptr complex cmp eax saddr add eax laddr eax laddr mov eax dword ptr mem
+varr8frombool pdblout push ecx lea ecx mem mov edx dword ptr complex fstp mem fild mem mov dword ptr mem eax mov dword ptr complex 0 mov eax dword ptr complex fild mem mov mem edx edx laddr mov edx dword ptr complex mov mem ecx movsx ecx byte ptr complex boolin push edx mov edx dword ptr complex fstp mem fild mem mov dword ptr mem eax mov dword ptr complex 0 mov eax dword ptr complex fild mem mov mem edx edx laddr mov edx dword ptr complex mov mem ecx movsx ecx byte ptr complex
+variantclear pvarg push eax lea eax mem mov dword ptr complex 0 mov dword ptr mem 0
+variantclear pvarg push edx lea edx complex
+formatmessagea arguments push esi xor esi esi push esi nsize maddr lpbuffer push ecx lea ecx complex add esp maddr sub esp maddr mov eax mem dwlanguageid push esi push esi xor esi esi push esi dwmessageid push eax test eax eax mov eax mem mov eax mem lpsource push esi push esi push esi xor esi esi push esi dwflags maddr
+safearraygetdim psa push ebx mov ebx mem mov ebx mem mov edx mem mov ax mem mov mem ecx mov ecx mem mov mem eax mov eax mem mov mem eax mov eax mem mov mem eax mov edx ebp mov eax mem mov ebp complex push ebp push ebx mov ecx mem sub esp 8 mov eax mem
+safearraygetlbound pllbound push eax lea eax complex cmp eax edi mov complex eax mov edi 1 ndim push esi mov esi edi cmp eax edi mov complex eax mov edi 1 psa push ebx
+safearraygetubound plubound push ecx lea ecx complex ndim push esi psa push ebx
+safearrayaccessdata ppvdata push ecx lea ecx complex mov esi mem add esp 8 pop esi mov eax mem mov ecx complex cmp esi eax inc esi sub edx ecx mov eax complex mov ecx complex mov edx complex psa push ebx pop ebx
+safearrayunaccessdata psa push ebx pop ebx
+safearrayaccessdata ppvdata push ecx lea ecx complex add esp 8 mov eax mem mov edx mem mov mem eax mov eax mem mov mem edx mov edx mem mov ecx mem cmp word ptr mem laddr psa push ebx pop ebx
+safearraygetelemsize psa push ebx pop ebx
+safearrayunaccessdata psa push ebx
+variantcopy pvargsrc push edx mov edx mem sbb ecx ecx neg ecx mov ecx mem mov eax mem mov dword ptr complex eax mov dword ptr complex eax mov dword ptr complex eax mov dword ptr complex eax xor eax eax mov ecx complex sub esp saddr pvargdest push eax lea eax complex mov word ptr complex cx mov word ptr complex saddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr mov eax mem mov dword ptr complex eax mov dword ptr complex eax mov dword ptr complex eax mov dword ptr complex eax xor eax eax mov ecx complex sub esp saddr
+sysallocstring lpmultibytestr push eax mov eax mem mov edx mem cmp eax laddr cmp eax laddr mov dword ptr complex ecx mov dword ptr complex eax mov word ptr complex 7 mov ecx mem psz push esi mov esi eax call extrfun push eax mov eax mem mov edx mem cmp eax laddr cmp eax laddr mov dword ptr complex ecx mov dword ptr complex eax mov word ptr complex 7 mov ecx mem
+variantclear lpmem push esi pvarg push esi mov esi complex mov dword ptr complex ecx mov ecx mem mov word ptr complex 4 mov dword ptr complex eax mov dword ptr complex edx mov word ptr complex 5 mov eax mem mov edx mem add esp saddr pop esi xor eax eax cmp eax laddr cmp eax laddr mov word ptr complex saddr mov dword ptr complex eax mov word ptr complex 2 mov eax mem mov word ptr complex 3 cmp eax laddr cmp eax laddr cmp eax laddr mov word ptr complex saddr add esp 4 call extrfun mov dword ptr complex eax push esi
+safearrayallocdescriptor ppsaout push eax lea eax complex cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr eax laddr mov eax edi mov edi 1 cmp edi laddr cmp complex ebp cmp esi ebp add esp 8 mov esi eax call extrfun mov complex ebp xor ebp ebp mov edi mem push edi lea ecx complex mov edx mem push esi push ebp mov eax complex sub esp saddr cdims 1
+safearrayallocdata psa push edx mov edx complex mov ecx complex mov mem eax mov eax complex mov mem edi test eax eax
+safearrayaccessdata ppvdata push eax lea eax complex mov ecx complex psa push ecx mov ecx complex
+safearraydestroy psa push edx mov edx complex
+sysallocstring lpmultibytestr push eax mov eax mem mov edi esi cmp eax ebp mov complex ebp mov eax complex add esp saddr xor eax eax pop ebp pop esi pop edi psz push esi mov esi eax call extrfun push eax mov eax mem mov edi esi cmp eax ebp mov complex ebp mov eax complex add esp saddr xor eax eax pop ebp pop esi pop edi
+safearrayunaccessdata lpmem push esi psa push eax mov eax complex imul ecx complex mov edi complex mov ecx edi add ecx 4 add eax 4 mov esi complex mov mem esi sbb esi esi neg esi mov esi mem mov eax esi mov ecx complex cmp eax ebp mov eax complex mov complex eax cmp eax ecx add ebp 4 add edi 4 inc eax add esp 4 mov ecx complex mov eax complex call extrfun mov mem eax push esi
+variantclear pvarg push esi mov esi complex
+variantclear pvarg push esi test esi esi mov esi complex push esi
+variantcopy pvargsrc push eax test eax eax mov eax complex pvargdest push esi
+variantclear pvarg push esi mov esi complex push esi
+variantinit pvarg push esi
+variantchangetype plubound push eax lea eax complex sub esp saddr ppvdata push ecx lea ecx complex lea eax complex sub esp saddr vt 8 wflags push edx mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex edx mov eax dword ptr complex mov dword ptr complex eax mov dword ptr complex edx xor edx edx mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex add esp saddr add esp 8 call extrfun call extrfun cmp word ptr complex 0 mov eax dword ptr complex test eax eax call extrfun push ecx push eax lea ecx complex lea eax complex sub esp saddr pvarsrc push eax lea eax complex mov dword ptr complex ecx mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex edx mov eax dword ptr complex mov dword ptr complex eax mov dword ptr complex edx xor edx edx mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex add esp saddr add esp 8 call extrfun call extrfun cmp word ptr complex 0 mov eax dword ptr complex test eax eax call extrfun push ecx push eax lea ecx complex lea eax complex sub esp saddr pvargdest push ecx lea ecx complex lea eax complex mov dword ptr complex ecx mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex edx mov eax dword ptr complex mov dword ptr complex eax mov dword ptr complex edx xor edx edx mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex add esp saddr add esp 8 call extrfun call extrfun cmp word ptr complex 0 mov eax dword ptr complex test eax eax call extrfun push ecx push eax lea ecx complex lea eax complex sub esp saddr
+variantclear lpwidecharstr push edx mov edx dword ptr complex add esp saddr pvarg push eax lea eax complex mov edi eax add esp 4 call extrfun push edi mov edx dword ptr complex add esp saddr xor eax eax test eax eax
+variantchangetype plubound push eax lea eax mem mov ebp esp push ebp ppvdata push ecx lea ecx mem lea eax mem mov ebp esp push ebp vt 5 wflags push edx mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex edx mov eax dword ptr complex mov dword ptr mem eax mov dword ptr mem edx xor edx edx mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex mov eax dword ptr mem test eax eax call extrfun push ecx push eax lea ecx mem lea eax mem mov ebp esp push ebp pvarsrc push eax lea eax mem mov dword ptr complex ecx mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex edx mov eax dword ptr complex mov dword ptr mem eax mov dword ptr mem edx xor edx edx mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex mov eax dword ptr mem test eax eax call extrfun push ecx push eax lea ecx mem lea eax mem mov ebp esp push ebp pvargdest push ecx lea ecx mem lea eax mem mov dword ptr complex ecx mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex edx mov eax dword ptr complex mov dword ptr mem eax mov dword ptr mem edx xor edx edx mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex mov eax dword ptr mem test eax eax call extrfun push ecx push eax lea ecx mem lea eax mem mov ebp esp push ebp
+variantclear pvarg push eax mov esi eax push esi mov eax complex sub esp saddr
+variantinit pvarg push esi
+safearraygetdim psa push ebx mov ebx mem test byte ptr mem saddr pop ebx mov eax 1
+safearraygetlbound pllbound push eax lea eax complex mov ebp eax ndim push esi mov esi edi cmp ebp edi mov edi 1 mov ebp eax psa push ebx
+safearraygetubound plubound push ecx lea ecx complex ndim push esi psa push ebx
+variantinit pvarg push eax lea eax complex add esp saddr xor eax eax cmp complex edi imul edi edx inc edx sub edx ecx mov ecx complex mov edx complex
+safearrayaccessdata int push ecx lea ecx complex pvarg push edx lea edx complex lea ecx complex ppvdata push eax lea eax complex mov ecx complex lea edi mem mov eax complex cmp eax ebp xor ebp ebp mov eax complex add esp saddr pop ebp pop edi test eax eax add esp 8 call extrfun push ecx lea edx complex lea ecx complex psa push ebx pop ebx call extrfun
+variantclear pvarg push eax add eax edi shl edi 4 mov eax complex test eax eax
+variantchangetype vt push esi cmp esi ecx ecx laddr mov ecx eax mov eax dword ptr complex mov mem eax mov eax dword ptr complex mov mem edx mov edx dword ptr complex mov mem eax mov eax dword ptr complex mov mem edx mov edx dword ptr complex mov ecx complex wflags push ebp pvarsrc push eax lea eax complex mov dword ptr complex edx mov dword ptr complex ecx mov dword ptr complex eax mov dword ptr complex edx xor edx edx mov eax dword ptr complex mov dword ptr complex eax mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex cmp esi ecx ecx laddr mov ecx eax mov eax dword ptr complex mov mem eax mov eax dword ptr complex mov mem edx mov edx dword ptr complex mov mem eax mov eax dword ptr complex mov mem edx mov edx dword ptr complex mov ecx complex pvargdest push ecx lea ecx complex lea eax complex mov dword ptr complex edx mov dword ptr complex ecx mov dword ptr complex eax mov dword ptr complex edx xor edx edx mov eax dword ptr complex mov dword ptr complex eax mov dword ptr complex edx mov ecx dword ptr complex mov edx dword ptr complex cmp esi ecx ecx laddr mov ecx eax mov eax dword ptr complex mov mem eax mov eax dword ptr complex mov mem edx mov edx dword ptr complex mov mem eax mov eax dword ptr complex mov mem edx mov edx dword ptr complex mov ecx complex
+variantclear pvarg push edx lea edx complex mov complex eax cmp eax ebp
+safearrayaccessdata ppvdata push eax lea eax complex add esp saddr xor eax eax psa push ebx pop ebx
+safearraygetelemsize psa push ebx
+sysfreestring bstrstring push eax mov eax mem mov complex edx add edx ecx imul ecx edi mov ecx ebp mov edx complex mov ebp eax
+safearrayunaccessdata psa push ebx
+variantclear pvarg push eax lea eax mem test eax eax mov eax mem
+variantchangetype plubound push eax lea eax complex mov cx mem mov complex 0 mov eax complex sub esp saddr ppvdata push ecx lea ecx complex lea eax complex mov cx mem mov complex 0 mov eax complex sub esp saddr vt maddr wflags push eax mov dword ptr complex eax mov dword ptr complex ecx mov dword ptr complex eax mov dword ptr complex eax mov edx dword ptr complex mov dword ptr complex edx xor eax eax mov dword ptr complex eax mov ecx dword ptr complex mov edx dword ptr complex mov eax dword ptr complex add esp saddr test eax eax add esp 8 call extrfun push ecx push eax lea ecx complex lea eax complex mov cx mem mov complex 0 mov eax complex sub esp saddr pvarsrc push ecx lea ecx complex mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex ecx mov dword ptr complex eax mov dword ptr complex eax mov edx dword ptr complex mov dword ptr complex edx xor eax eax mov dword ptr complex eax mov ecx dword ptr complex mov edx dword ptr complex mov eax dword ptr complex add esp saddr test eax eax add esp 8 call extrfun push ecx push eax lea ecx complex lea eax complex mov cx mem mov complex 0 mov eax complex sub esp saddr pvargdest push edx lea edx complex lea ecx complex mov dword ptr complex edx mov dword ptr complex eax mov dword ptr complex ecx mov dword ptr complex eax mov dword ptr complex eax mov edx dword ptr complex mov dword ptr complex edx xor eax eax mov dword ptr complex eax mov ecx dword ptr complex mov edx dword ptr complex mov eax dword ptr complex add esp saddr test eax eax add esp 8 call extrfun push ecx push eax lea ecx complex lea eax complex mov cx mem mov complex 0 mov eax complex sub esp saddr
+safearraygetdim psa push edi mov edi mem mov edi dword ptr complex add esp saddr xor eax eax pop edi test eax eax
+safearraygetlbound pllbound push eax lea eax complex mov ebp eax ndim push esi mov esi ebx psa push edi
+safearraygetubound plubound push ecx lea ecx complex ndim push esi psa push edi
+safearrayaccessdata ppvdata push eax lea eax complex mov ecx complex mov edx complex psa push edi
+safearrayunaccessdata psa push edi call extrfun
+variantclear pvarg push edx lea edx complex mov eax complex
+findfirstfilea lpfindfiledata push eax lea eax complex xor eax eax mov ecx eax shr ecx 2 lea edx complex mov edi edx mov esi edi mov eax ecx sub edi ecx ecx lea edx complex ecx laddr lea edi complex ecx 3 mov ecx ebx dec edi mov ebx ecx mov edi ptr asc612718 cmp complex saddr dec ecx mov edi complex push edi push esi push ebx lea edx complex sub esp maddr lpfilename push ecx lea ecx complex ecx 3 lea eax complex mov ecx ebx shr ecx 2 ecx laddr mov ebx ecx sub edi ecx ecx mov edi ptr asc612714 xor eax eax mov ecx eax lea edx complex mov edi edx mov esi edi mov eax ecx lea edx complex lea edi complex dec edi mov edi ptr asc612718 cmp complex saddr dec ecx mov edi complex push edi push esi push ebx lea edx complex sub esp maddr
+deletefilea lpfilename push eax lea eax complex
+findnextfilea lpfindfiledata push ecx lea ecx complex hfindfile push ebp
+findclose hfindfile push ebp
+removedirectorya lppathname push esi call extrfun push esi pop esi cmp byte ptr mem saddr mov edi esi push edi test esi esi mov esi complex
+pathfileexistsa pszpath push eax mov eax mem
+createfilea htemplatefile 0 dwflagsandattributes 20h dwcreationdisposition 2 lpsecurityattributes 0 dwsharemode 0 dwdesiredaccess laddr lpfilename push eax mov eax complex sub esp 8
+closehandle hobject push edi
+closehandle hobject push edi pop edi
+getmodulefilenamea nsize maddr lpfilename push eax lea eax complex sub esp maddr hmodule 0
+getmodulefilenamea nsize maddr lpfilename ptr hmodule 0
+getcommandlinea
+getmodulefilenamea nsize maddr lpfilename ptr hmodule 0
+getmodulefilenamea nsize maddr lpfilename ptr hmodule 0
+wsprintfa lp push edx mov edx complex mov eax complex add esp maddr mov eax ptr str mov byte ptr mem 0 add esp 8 lp push eax mov eax complex cmp eax laddr add esp maddr xor eax eax cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr add esp 4 call extrfun mov edx complex cmp eax 3 add eax laddr cmp eax laddr cmp eax laddr mov eax complex mov eax ptr str mov byte ptr mem 0 add esp 8 dwbytes push ecx mov ecx complex cmp ecx 9 lea ecx mem add esp maddr add esp 4 call extrfun mov eax complex cmp eax laddr xor eax eax cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr call extrfun mov edx complex cmp eax 3 add eax laddr cmp eax laddr cmp eax laddr mov eax complex mov eax ptr str mov byte ptr mem 0 add esp 8 lp push edx mov edx complex add esp maddr add esp 4 call extrfun mov ecx complex cmp ecx 9 lea ecx mem call extrfun mov eax complex cmp eax laddr xor eax eax cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr call extrfun mov edx complex cmp eax 3 add eax laddr cmp eax laddr cmp eax laddr mov eax complex mov eax ptr str mov byte ptr mem 0 add esp 8 dwbytes push eax mov eax complex add esp maddr xor eax eax add esp 4 call extrfun mov edx complex call extrfun mov ecx complex cmp ecx 9 lea ecx mem call extrfun push eax mov eax complex cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr call extrfun push edx mov edx complex cmp eax 3 add eax laddr cmp eax laddr cmp eax laddr mov eax complex mov eax ptr str mov byte ptr mem 0 add esp 8 lpmem push ecx mov ecx complex mov eax complex add esp maddr xor eax eax add esp 4 call extrfun mov edx complex call extrfun push ecx mov ecx complex cmp ecx 9 lea ecx mem call extrfun push eax mov eax complex cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr call extrfun push edx mov edx complex cmp eax 3 add eax laddr cmp eax laddr cmp eax laddr mov eax complex mov eax ptr str mov byte ptr mem 0 add esp 8 blackmoon runtime error rnrn ptr lpstr push eax lea eax complex mov edx complex add esp maddr add esp 8 call extrfun push eax mov ecx complex mov eax complex xor eax eax add esp 4 call extrfun push edx mov edx complex call extrfun push ecx mov ecx complex cmp ecx 9 lea ecx mem call extrfun push eax mov eax complex cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr cmp eax laddr call extrfun mov edx complex cmp eax 3 add eax laddr cmp eax laddr cmp eax laddr mov eax complex mov eax ptr str mov byte ptr mem 0
+messageboxa utype saddr error ptr lptext push ecx lea ecx complex add esp saddr hwnd 0
+wsprintfa uexitcode 0 uexitcode push edx mov edx complex add esp maddr add esp 4 call extrfun lpcstr ptr lpstr push eax lea eax complex add esp maddr mov eax 3 xor eax eax add esp 4 call extrfun mov edx complex call extrfun
+messageboxa utype saddr blackmoon ptr lptext push ecx lea ecx complex add esp saddr hwnd 0
+getmodulehandlea lpmodulename push ebp mov ebp complex push ebp sub esp maddr
+loadlibrarya lplibfilename push ebp
+wsprintfa í ptr lpstr push eax lea eax complex mov ebx eax
+messageboxa utype saddr dll error ptr lptext push ecx lea ecx complex add esp saddr hwnd push ebx
+getprocaddress lpprocname push esi hmodule push ebx
+wsprintfa îþ ptr lpstr push edx lea edx complex
+messageboxa utype saddr dll error ptr lptext push eax lea eax complex add esp saddr hwnd push esi
+lcmapstringa cchdest push ebp mov ecx ebp lpdeststr push esi mov edi esi mov esi eax cchsrc push eax mov eax complex add esp saddr xor eax eax mov esi eax lpsrcstr push ecx mov ecx complex mov eax complex ecx 3 mov ecx edx shr ecx 2 add esp saddr xor eax eax mov edx ecx mov esi eax mov ecx ebp dwmapflags laddr locale maddr
+getprocessheap 60h
+heapalloc dwbytes push ebx lea ebx mem dwflags 0 hheap push eax mov ptr eax
+getprocessheap
+heapalloc dwbytes push ecx lea ecx mem dwflags 0 hheap push eax mov ptr eax
+heaprealloc lpmem push ecx mov ecx mem ecx 3 mov ecx eax shr ecx 2 mov eax ecx mov edi eax push edi mov esi mem mov ecx ebp cmp ebp ecx mov ecx mem mov complex eax test eax eax dwbytes push esi lea esi mem pop ebp pop esi mov mem ebp lea ecx mem call extrfun mov ecx ebx push ecx mov ecx mem ecx 3 mov ecx eax shr ecx 2 mov eax ecx mov edi eax push edi mov esi mem mov ecx ebp cmp ebp ecx mov ecx mem mov complex eax test eax eax lpmem push edx mov edx mem pop ebx mov mem ecx mov mem eax mov mem ebp lea ecx mem mov eax complex call extrfun mov ecx ebx push ecx mov ecx mem ecx 3 mov ecx eax shr ecx 2 mov eax ecx mov edi eax push edi mov esi mem mov ecx ebp cmp ebp ecx mov ecx mem mov complex eax test eax eax dwflags 0 hheap push eax mov mem eax mov mem ebp lea ecx mem mov eax complex call extrfun mov ecx ebx push ecx mov ecx mem ecx 3 mov ecx eax shr ecx 2 mov eax ecx mov edi eax push edi mov esi mem mov ecx ebp cmp ebp ecx mov ecx mem mov complex eax test eax eax
+getprocessheap
+heapfree lpmem push edi dwflags 0 hheap push eax mov ptr eax
+shgetspecialfolderpatha fcreate 0 csidl push eax add eax 7 eax saddr sbb eax eax neg eax sub eax 7 mov eax 2 cmp eax 6 mov eax saddr cmp eax 5 mov eax saddr cmp eax 4 mov eax saddr cmp eax 3 mov eax 6 cmp eax 2 mov eax 5 cmp eax 1 cmp eax 8 mov eax mem mov eax complex sub esp maddr pszpath push ecx lea ecx complex mov complex 0 mov esi complex push esi mov eax complex sub esp maddr hwnd 0
+getwindowsdirectorya usize maddr lpbuffer push edx lea edx complex
+getsystemdirectorya usize maddr lpbuffer push edx lea edx complex
+gettemppatha lpbuffer push edx lea edx complex nbufferlength maddr
+ptvisible mem x complex hdc mem
+rectvisible lprect mem hdc mem
+textouta c mem lpstring complex complex x complex hdc mem
+exttextouta lpdx mem c mem lpstring mem lprect mem options mem mem x mem hdc mem
+tabbedtextouta ntaborigin mem lpntabstoppositions mem ntabpositions mem chcount mem lpstring mem mem x mem hdc mem
+drawtexta format mem lprc complex cchtext complex lpchtext complex hdc mem
+graystringa nheight mem nwidth mem mem x mem ncount mem lpdata mem lpoutputfunc mem hbrush push eax mov eax mem test eax eax mov eax mem mov ebp esp push ebp hdc mem
+escape pvout mem pvin complex cjin complex iescape complex hdc mem
+getmodulehandlea user32 ptr
+isiconic hwnd mem
+getwindowplacement lpwndpl push eax lea eax mem test eax eax hwnd mem
+getwindowrect lprect push eax lea eax mem hwnd mem
+systemparametersinfoa fwinini push esi cmp ebx esi xor esi esi mov ebx mem cmp mem laddr pvparam push eax lea eax mem mov ebx mem cmp mem laddr uiparam push esi push esi cmp ebx esi xor esi esi mov ebx mem cmp mem laddr uiaction 30h
+lstrcpya display ptr lpstring1 push ebx add ebx saddr mov mem esi mov mem eax pop esi cmp dword ptr mem saddr lea esi mem lea edi mem
+getparent hwnd mem
+enablewindow benable 0 hwnd mem
+enablewindow benable 1 hwnd mem
+initializecriticalsection lpcriticalsection push eax lea eax mem mov mem eax mov eax complex mov mem eax dword ptr mem 0 dword ptr mem 0 mov esi ecx push esi mov eax mem
+entercriticalsection lpcriticalsection push edi lea edi mem push edi mov esi ecx push esi
+leavecriticalsection lpcriticalsection push edi
+entercriticalsection lpcriticalsection push ebx lea ebx mem mov mem esi mov mem esp mov esi ecx push esi push ebx sub esp saddr
+leavecriticalsection lpcriticalsection push ebx
+leavecriticalsection lpcriticalsection push eax add eax saddr mov eax mem mov eax edi mov ecx mem
+entercriticalsection lpcriticalsection push ebx lea ebx mem push ebx mov esi ecx push esi
+leavecriticalsection lpcriticalsection push ebx
+getversion
+getcommandlinea
+getstartupinfoa lpstartupinfo push eax lea eax mem mov mem esi
+getmodulehandlea nshowcmd push eax pop eax movzx eax mem test byte ptr mem 1 mov mem eax lpcmdline mem hprevinstance push esi lpmodulename push esi push esi
+exitprocess numberofbyteswritten mem uexitcode maddr
+interlockedincrement lpaddend push esi mov esi ptr addend push esi
+interlockedincrement lpaddend push esi mov esi ptr addend push esi
+heapfree lpmem push esi dwflags 0 hheap ptr
+heapalloc dwbytes push eax add eax saddr pop eax test eax eax mov eax mem dwflags 0 hheap ptr
+rtlunwind returnvalue 0 exceptionrecord mem targetip mem targetframe mem
+rtlunwind returnvalue 0 exceptionrecord 0 targetip ptr targetframe mem
+getcurrentprocess uexitcode complex
+terminateprocess hprocess push eax
+exitprocess uexitcode complex
+raiseexception lparguments push eax lea eax mem mov mem eax mov eax mem mov mem eax lea edi mem push edi mov eax mem mov ebp esp push ebp nnumberofarguments mem dwexceptionflags mem dwexceptioncode mem
+heaprealloc dwbytes push esi esi laddr add esi saddr pop esi test esi esi lpmem mem dwflags saddr hheap ptr
+heapsize lpmem mem dwflags 0 hheap ptr
+getcpinfo lpcpinfo push eax lea eax mem cmp eax ptr unknown ptr add eax saddr cmp mem ebx mov eax ptr unknown ptr test ebx ebx mov mem ebx cmp ebx codepage mov ebx eax codepage push ebx cmp mem ebx mov eax ptr unknown ptr test ebx ebx mov mem ebx cmp ebx codepage mov ebx eax
+getcpinfo lpcpinfo push eax lea eax mem mov ebp esp push ebp codepage codepage
+heapalloc dwbytes push esi mov mem esi esi laddr add esi saddr pop esi cmp esi edi cmp mem edi call extrfun mov mem eax dwflags push edi cmp esi edi cmp mem edi call extrfun mov mem eax hheap ptr
+heaprealloc dwbytes push esi mov mem esi esi laddr add esi saddr pop esi cmp esi edi cmp mem edi lpmem push ebx dwflags push edi cmp esi edi cmp mem edi hheap ptr
+heapalloc dwbytes push esi call extrfun dwflags 0 hheap ptr
+heaprealloc dwbytes push esi call extrfun lpmem push ebx call extrfun dwflags 0 hheap ptr
+heaprealloc dwbytes push esi esi laddr add esi saddr pop esi cmp esi edi cmp esi laddr xor edi edi lpmem push ebx dwflags push edi cmp esi edi cmp esi laddr xor edi edi hheap ptr
+unhandledexceptionfilter exceptioninfo mem
+getmodulefilenamea nsize maddr lpfilename push esi mov esi ptr filename hmodule push ebx
+getenvironmentstrings
+freeenvironmentstringsw lpmem complex penv push esi call extrfun
+getenvironmentstrings
+freeenvironmentstringsa penv push edi
+getstartupinfoa lpstartupinfo push eax lea eax mem add eax maddr mov eax ptr cmp esi eax lea eax mem mov ptr esi
+getfiletype hfile push ecx cmp ecx laddr mov ecx mem mov eax mem add ecx maddr add eax saddr mov ecx mem mov byte ptr mem saddr dword ptr mem 0 dword ptr mem laddr byte ptr mem 0 cmp eax ecx lea ecx mem mov mem eax pop ecx test eax eax
+getstdhandle nstdhandle push eax add eax laddr sbb eax eax neg eax dec eax mov eax ebx pop eax test ebx ebx lea esi mem cmp dword ptr mem laddr lea eax mem mov ecx ptr xor ebx ebx cmp esi edi inc ebx inc esi mov mem cl mov cl mem mov mem ecx mov ecx mem mov ecx mem lea eax mem lea eax mem mov ecx ptr eax saddr sar ecx 5 mov eax esi mov ecx esi test eax eax
+getfiletype hfile push edi cmp edi laddr mov edi eax
+sethandlecount unumber unumber
+tlsalloc
+tlssetvalue 74h lptlsvalue push esi test esi esi mov esi eax call extrfun mov dwtlsindex eax cmp eax laddr dwtlsindex dwtlsindex
+getcurrentthreadid
+getlasterror
+tlsgetvalue dwtlsindex dwtlsindex
+tlssetvalue 74h lptlsvalue push esi test esi esi mov esi eax call extrfun dwtlsindex dwtlsindex
+getcurrentthreadid
+setlasterror dwerrcode push edi
+getmodulehandlea lpmodulename 0
+getversionexa lpversioninformation push eax lea eax mem
+getenvironmentvariablea nsize maddr lpbuffer push eax lea eax mem pop eax cmp mem 5 cmp mem 2 test eax eax msvcrtheapselect ptr
+getmodulefilenamea nsize maddr lpfilename push eax lea eax mem lea eax mem test eax eax hmodule push ebx
+heapcreate dwmaximumsize 0 dwinitialsize maddr floptions push eax cmp complex eax xor eax eax
+heapdestroy hheap ptr
+getmodulefilenamea nsize maddr lpfilename push eax lea eax mem test eax eax cmp eax 1 mov eax ptr cmp eax ptr runtime ptr add eax 8 cmp edx mem mov eax offset ptr mov edx mem mov ebp esp push ebp hmodule 0
+getstdhandle nnumberofbytestowrite push eax lpbuffer mem nstdhandle laddr
+writefile hfile push eax
+getmodulehandlea kernel32 ptr
+getprocaddress isprocessorfeaturepresent ptr hmodule push eax test eax eax
+initializecriticalsection lpmem push edi
+entercriticalsection lpcriticalsection mem
+leavecriticalsection lpcriticalsection mem
+lcmapstringw cchdest push edi cmp ptr edi xor edi edi push edi lpdeststr push edi push edi cmp ptr edi xor edi edi push edi cchsrc push ebx pop ebx push ebx lpsrcstr ptr dwmapflags push esi mov esi maddr push esi locale push edi push edi push edi cmp ptr edi xor edi edi push edi
+lcmapstringa cchdest push edi lpdeststr push edi push edi cchsrc push ebx mov ptr ebx lpsrcstr ptr dwmapflags push esi locale push edi push edi push edi
+lcmapstringa cchdest mem lpdeststr mem cchsrc mem lpsrcstr mem dwmapflags mem locale mem
+multibytetowidechar cchwidechar push edi cmp mem edi lpwidecharstr push edi push edi cmp mem edi cbmultibyte mem lpmultibytestr mem dwflags push eax inc eax eax 8 sbb eax eax neg eax mov eax mem push mem push mem mov mem eax mov eax ptr cmp mem edi cmp eax 1 codepage mem
+multibytetowidechar cchwidechar push ebx mov ebx mem mem laddr mov mem edi xor edi edi mov esp mem mov mem eax mov eax esp mov mem esp lpwidecharstr mem cbmultibyte mem lpmultibytestr mem dwflags 1 codepage mem
+lcmapstringw cchdest push edi lpdeststr push edi push edi cchsrc push ebx lpsrcstr mem dwmapflags mem locale mem
+lcmapstringw cchdest mem lpdeststr mem cchsrc push ebx lpsrcstr mem dwmapflags mem locale mem
+lcmapstringw cchdest push esi mov esi mem mem laddr mov esp mem mov mem ebx mov ebx esp mov mem esp lpdeststr push ebx cmp ebx edi xor ebx ebx xor edi edi mov mem ebx mov ebx esp mov mem esp cchsrc mem lpsrcstr mem dwmapflags mem locale mem
+widechartomultibyte lpuseddefaultchar push edi cmp mem edi lpdefaultchar push edi push edi cmp mem edi cbmultibyte mem lpmultibytestr mem cchwidechar push esi lpwidecharstr push ebx dwflags maddr codepage mem
+raiseexception lparguments push eax lea eax mem nnumberofarguments push ebx dwexceptionflags 0 dwexceptioncode mem
+heapalloc dwbytes maddr dwflags 0 hheap ptr
+heapfree lpmem mem dwflags 0 hheap ptr
+heaprealloc dwbytes push eax shl eax 2 lea eax complex cmp eax ecx mov ecx ptr mov eax ptr lpmem lpmem dwflags push edi xor edi edi push edi hheap ptr
+heapalloc dwbytes laddr dwflags 8 hheap ptr
+virtualalloc flprotect 4 flallocationtype maddr dwsize laddr lpaddress push edi cmp eax edi
+heapfree lpmem mem dwflags push edi cmp eax edi hheap ptr
+virtualalloc 3fh flprotect 4 flallocationtype maddr dwsize laddr lpaddress push edi add edi mem shl edi saddr mov edi ebx mov eax ebx inc ebx shl eax 1 test eax eax xor ebx ebx mov eax mem mov esi mem push edi push esi push ebx mov ecx mem push ecx mov ebp esp push ebp
+heapalloc dwbytes maddr dwflags 0 hheap ptr
+virtualfree dwfreetype laddr dwsize 0 lpaddress push edi add edi maddr mov dword ptr mem maddr mov mem eax lea eax mem byte ptr mem maddr cmp edi eax add eax ebx mov eax mem
+heapfree lpmem push esi cmp esi ptr runtime ptr dwflags 0 hheap ptr
+virtualfree dwfreetype laddr dwsize 0 lpaddress mem
+heapfree lpmem push esi mov ecx mem mov eax mem cmp esi ptr runtime ptr mov runtime ptr eax cmp runtime ptr esi dwflags 0 hheap ptr
+virtualfree dwfreetype laddr dwsize maddr lpaddress push eax add eax mem mov eax ebx mov ebx laddr lea edi mem cmp dword ptr mem laddr push edi mov esi runtime ptr push esi push ebx
+virtualalloc flprotect 4 flallocationtype maddr dwsize push eax shl eax saddr mov eax mem cmp dword ptr mem laddr inc mem add eax 8 cmp mem saddr mov eax ebx mov esi ebx mem 0 mov ebx mem cmp edi eax mov edi mem cmp dword ptr mem 0 cmp dword ptr mem laddr mov edi eax mov eax ptr runtime ptr mov mem edi sub mem ebx mov runtime ptr esi cmp esi runtime ptr mov esi mem mov ebx mem cmp edi mem add edi 8 add mem maddr mov mem ebx test eax eax call extrfun push mem push eax push ebx cmp mem ebx cmp eax ebx mov eax mem mov mem ecx mov mem eax lea edi mem mov ecx mem mov eax mem mov mem eax cmp edi ecx add eax maddr lea ecx mem call extrfun push ecx cmp ecx ebx mov ecx mem add eax edx sar eax 3 sub eax saddr sub eax esi mov eax edi mov edi mem cmp edx laddr mov edx mem push edi mov esi runtime ptr push esi mov ebp esp push ebp lpaddress push esi add esi mem shl esi saddr sar esi 3 sub esi saddr sub esi edi mov esi ebx mov ebx mem cmp edi eax mov edi mem cmp dword ptr mem 0 cmp dword ptr mem laddr mov edi eax mov eax ptr runtime ptr mov mem edi sub mem ebx mov runtime ptr esi cmp esi runtime ptr mov esi mem mov ebx mem cmp edi mem add edi 8 add mem maddr mov mem ebx test eax eax call extrfun push mem push eax push ebx cmp mem ebx cmp eax ebx mov eax mem mov mem ecx mov mem eax lea edi mem mov ecx mem mov eax mem mov mem eax cmp edi ecx add eax maddr lea ecx mem mov eax mem call extrfun push ecx cmp ecx ebx mov ecx mem add eax edx shl eax saddr sar eax 3 sub eax saddr sub eax esi mov eax edi mov edi mem cmp edx laddr mov edx mem push edi mov esi runtime ptr push esi mov ebp esp push ebp
+ 5
+ 5
+heapalloc dwbytes push esi dwflags 8 hheap ptr
+lpfn exceptioninfo push esi
+setunhandledexceptionfilter lptoplevelexceptionfilter ptr
+setunhandledexceptionfilter lptoplevelexceptionfilter lpfn
+getstringtypew lpchartype push eax lea eax mem cmp eax ebx xor ebx ebx mov eax ptr mov mem esp push ebx sub esp saddr mov large fs0 esp push eax mov eax large fs0 mov ebp esp push ebp cchsrc push esi pop esi push esi lpsrcstr ptr dwinfotype push esi push esi pop esi push esi
+getstringtypea lpchartype push eax lea eax mem mov eax esi test eax eax cchsrc push esi mov eax esi test eax eax lpsrcstr ptr dwinfotype push esi push esi mov eax esi test eax eax locale push ebx
+getstringtypea lpchartype mem cchsrc mem lpsrcstr mem dwinfotype mem locale push eax mov eax ptr cmp eax ebx mov eax mem cmp eax 2 mov ptr eax pop eax test eax eax
+multibytetowidechar cchwidechar push ebx cmp mem ebx lpwidecharstr push ebx push ebx cmp mem ebx cbmultibyte mem lpmultibytestr mem dwflags push eax inc eax eax 8 sbb eax eax neg eax mov eax mem push mem push mem mov mem eax mov eax ptr cmp mem ebx cmp eax 1 codepage mem
+multibytetowidechar cchwidechar mem lpwidecharstr push esi cmp esi ebx xor esi esi xor ebx ebx cbmultibyte mem lpmultibytestr mem dwflags 1 codepage mem
+getstringtypew lpchartype mem cchsrc push eax cmp eax ebx lpsrcstr push esi dwinfotype mem
+loadlibrarya user32dll ptr
+setfilepointer dwmovemethod complex lpdistancetomovehigh 0 ldistancetomove complex hfile push eax mov dword ptr mem 9
+getlasterror
+writefile lpoverlapped 0 lpnumberofbyteswritten push eax lea eax mem sub edi eax lea eax mem mov edi eax lea edx mem mov ecx eax inc eax mov mem cl mov byte ptr mem saddr inc mem mov cl mem inc mem mov ecx mem cmp ecx mem sub ecx mem mov mem edi mov mem eax cmp mem edi mov eax mem test byte ptr mem maddr add eax esi mov eax mem nnumberofbytestowrite push edi sub edi eax lea eax mem mov edi eax lea edx mem mov ecx eax inc eax mov mem cl mov byte ptr mem saddr inc mem mov cl mem inc mem mov ecx mem cmp ecx mem sub ecx mem mov mem edi mov mem eax cmp mem edi mov eax mem test byte ptr mem maddr add eax esi mov eax mem lpbuffer push eax lea eax mem push eax lea eax mem sub edi eax mov edi eax lea edx mem mov ecx eax inc eax mov mem cl mov byte ptr mem saddr inc mem mov cl mem inc mem mov ecx mem cmp ecx mem sub ecx mem mov mem edi mov mem eax cmp mem edi mov eax mem test byte ptr mem maddr add eax esi mov eax mem hfile mem
+getlasterror
+writefile lpoverlapped push edi lpnumberofbyteswritten push ecx lea ecx mem mov mem eax nnumberofbytestowrite mem lpbuffer mem hfile mem
+getlasterror
+entercriticalsection lpcriticalsection push eax add eax saddr
+entercriticalsection lpcriticalsection push eax add eax saddr mov eax mem
+leavecriticalsection lpcriticalsection push eax add eax saddr
+leavecriticalsection lpcriticalsection push eax add eax saddr mov eax mem
+interlockedincrement lpaddend push esi mov esi ptr addend push esi
+widechartomultibyte lpuseddefaultchar push ecx lea ecx mem pop ebp mov cx mem mov eax mem mov ebp esp push ebp lpdefaultchar 0 cbmultibyte cbmultibyte lpmultibytestr push eax pop eax mov mem cl test eax eax mov eax mem mov ebp esp push ebp cchwidechar 1 lpwidecharstr push eax lea eax mem push eax mem 0 lea ecx mem pop ebp pop eax mov mem cl mov cx mem test eax eax mov eax mem mov ebp esp push ebp dwflags maddr codepage ptr
+isbadreadptr ucb complex lp complex
+isbadwriteptr ucb complex lp complex
+isbadcodeptr lpfn complex
+setstdhandle hhandle push eax push eax sub ecx eax xor eax eax cmp dword ptr mem laddr test byte ptr mem 1 add eax esi shl esi 2 mov eax mem lea esi mem eax saddr mov eax ecx lea edi mem sar eax 5 push edi cmp ecx unumber push esi mov ecx mem nstdhandle laddr
+initializecriticalsection lpcriticalsection push eax lea eax mem cmp dword ptr mem 0
+entercriticalsection lpcriticalsection push eax lea eax complex mov eax mem
+leavecriticalsection lpcriticalsection push eax lea eax complex mov ecx ptr lea eax mem sar ecx 5 eax saddr mov ecx eax mov eax mem
+deletecriticalsection lpcriticalsection push eax add eax saddr mov eax mem mov eax ptr cmp eax laddr
+flushfilebuffers hfile push eax
+getlasterror
+fword
+closehandle hobject push eax
+getlasterror
+lstrcpyna imaxlength complex lpstring2 push eax lea eax mem cmp dword ptr mem 0 lpstring1 complex
+postmessagea lparam push eax xor eax eax mov esi eax call extrfun push esi wparam push eax push eax xor eax eax mov esi eax call extrfun push esi msg maddr hwnd mem
+lstrcmpa lpstring2 mem lpstring1 push ecx add ecx eax movzx ecx word ptr mem
+openprintera pdefault push edi phprinter push eax lea eax mem test eax eax pprintername mem
+documentpropertiesa fmode push edi pdevmodeinput push edi push edi pdevmodeoutput push edi push edi push edi pdevicename mem hprinter mem hwnd push edi push edi push edi push edi
+globalalloc dwbytes push eax uflags 42h
+documentpropertiesa fmode 2 pdevmodeinput push edi pdevmodeoutput push eax pdevicename mem hprinter mem hwnd push edi push edi
+closeprinter hprinter mem
+getcurrentthreadid
+setwindowshookexa dwthreadid push eax hmod 0 lpfn ptr idhook laddr
+peekmessagea wremovemsg push ebx cmp edi ebx mov complex ebx pop edi xor ebx ebx push edi push ebx wmsgfiltermax push ebx push ebx cmp edi ebx mov complex ebx pop edi xor ebx ebx push edi push ebx wmsgfiltermin push ebx push ebx push ebx cmp edi ebx mov complex ebx pop edi xor ebx ebx push edi push ebx hwnd push ebx push ebx push ebx push ebx cmp edi ebx mov complex ebx pop edi xor ebx ebx push edi push ebx lpmsg push ebp lea ebp mem mov esi ecx push esi push ebp push ecx
+peekmessagea wremovemsg push ebx mov complex ebx wmsgfiltermax push ebx push ebx mov complex ebx wmsgfiltermin push ebx push ebx push ebx mov complex ebx hwnd push ebx push ebx push ebx push ebx mov complex ebx lpmsg push ebp
+iswindowvisible hwnd push eax cmp eax ebp mov eax mem cmp edi ebp mov edi mem push edi cmp complex ebp xor ebp ebp push ebp
+iswindowvisible ncmdshow push ebp cmp mem ebp cmp esi edi cmp mem ebp cmp esi ebp mov esi mem hwnd mem
+validaterect lprect 0 hwnd mem
+callnexthookex lparam complex wparam complex ncode push esi hhk mem
+sendmessagea lparam push ebx cmp mem ebx mov ecx mem call extrfun cmp mem ebx wparam laddr msg maddr hwnd mem
+getactivewindow
+getmessagea wmsgfiltermax push eax xor eax eax wmsgfiltermin push eax push eax xor eax eax hwnd push eax push eax push eax xor eax eax lpmsg push edi lea edi mem push edi mov esi ecx push esi
+translatemessage lpmsg push edi
+dispatchmessagea lpmsg push edi
+enablemenuitem uenable push ecx add ecx 3 ecx laddr sbb ecx ecx neg ecx mov ecx complex mov esi ecx push esi uidenableitem mem hmenu mem
+getfocus
+getparent hwnd mem
+getnextdlgtabitem bprevious 0 hctl push ecx mov ecx mem test ecx ecx mov ecx mem call extrfun hdlg mem
+checkmenuitem ucheck push ecx ecx 8 sbb ecx ecx neg ecx mov ecx complex mov esi ecx push esi uidcheckitem mem hmenu mem
+setmenuitembitmaps hbitmapchecked hbitmapchecked hbitmapunchecked push edi cmp hbitmapchecked edi uflags maddr uposition mem hmenu mem
+getmenustate uflags push edi mov edi maddr push edi uid push ecx mov ecx mem cmp dword ptr mem 0 mov eax mem mov esi ecx push esi hmenu mem
+modifymenua lpnewitem complex uidnewitem mem uflags push eax eax edi uposition mem hmnu mem
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+interlockeddecrement lpaddend push eax add eax laddr
+interlockeddecrement lpaddend push esi cmp esi runtime ptr mov esi complex push esi
+interlockeddecrement lpaddend push eax add eax laddr lea ecx mem mov eax mem mov esi ecx push esi
+lstrlena lpstring push edi test edi edi mov edi complex push edi
+lstrlena lpstring mem
+getdlgitem niddlgitem mem hdlg mem
+isdialogmessagea lpmsg complex hdlg mem
+getwindowlonga nindex laddr hwnd mem
+getwindowlonga nindex laddr hwnd mem
+setwindowpos uflags mem cy mem cx mem mem x mem hwndinsertafter push eax mov eax mem test eax eax mov eax mem mov eax mem mov ebp esp push ebp hwnd mem
+showwindow ncmdshow mem hwnd mem
+iswindowenabled hwnd mem
+enablewindow benable mem hwnd mem
+setfocus hwnd mem
+getparent hwnd mem
+registerwindowmessagea commctrldraglistmsg ptr
+getwindowrect lprect complex hwnd mem
+getwindowrect lprect push eax lea eax mem test eax laddr call extrfun mov esi mem push esi test mem saddr mov ebp esp push ebp hwnd mem
+getwindow ucmd 4 hwnd mem
+sendmessagea lparam push eax lea eax mem mov mem eax mov eax mem mem edi mov mem eax test edi edi mov eax mem cmp ebx eax call extrfun mov ecx edi mov ebx eax mov edi mem call extrfun mov ecx esi test eax laddr call extrfun push edi mov esi mem push esi push ebx push ecx mov ebp esp push ebp wparam mem msg maddr hwnd mem
+getlastactivepopup hwnd mem
+getforegroundwindow
+setforegroundwindow hwnd mem
+getmessagetime
+getmessagepos
+defwindowproca void push esi mov esi mem push esi cmp mem maddr mov ebp esp push ebp int mem int mem cexception mem int16 push esi cmp mem esi test eax eax call extrfun push esi mov esi mem pop eax push esi cmp mem maddr mov ebp esp push ebp struct cwnd push eax cmp mem esi test eax eax call extrfun push esi mov esi mem pop eax push esi cmp mem maddr mov ebp esp push ebp lparam mem wparam mem msg mem hwnd push esi call extrfun push esi cmp mem esi test eax eax call extrfun push esi mov esi mem pop eax push esi cmp mem maddr mov ebp esp push ebp
+getpropa lpstring push esi mov esi ptr string push esi hwnd push edi mov edi mem push edi
+callwindowproca lparam mem wparam mem msg maddr hwnd push edi lpprevwndfunc mem
+setwindowlonga dwnewlong mem nindex laddr hwnd push edi pop edi
+removepropa lpstring push esi hwnd push edi
+globalfindatoma lpstring push esi
+globaldeleteatom natom push eax
+callwindowproca lparam mem wparam mem msg mem hwnd push edi lpprevwndfunc mem
+callnexthookex lparam mem wparam mem ncode mem hhk mem
+getclasslonga nindex laddr hwnd push ebx mov ebx mem
+globalgetatomnamea nsize 5 lpbuffer push eax lea eax mem mem cl mov ecx eax mov eax mem test eax laddr natom push eax push eax lea eax mem mem cl mov ecx eax mov eax mem test eax laddr
+lstrcmpia ime ptr lpstring1 push eax lea eax mem
+getwindowlonga int 0 int 0 cexception maddr int16 push ebx struct cwnd push esi nindex laddr hwnd push ebx call extrfun call extrfun push ebx
+setwindowlonga dwnewlong mem nindex laddr hwnd push ebx
+setwindowlonga dwnewlong push esi mov esi eax call extrfun nindex laddr hwnd push ebx call extrfun
+getwindowlonga nindex laddr hwnd push ebx
+setpropa hdata mem lpstring push esi hwnd push ebx
+globaladdatoma lpstring push esi
+setwindowlonga dwnewlong push eax mov extrfun mov eax ptr afxgraybackgroundwndproc ygjpauhwnd iij z cmp dword ptr mem 0 mov eax mem nindex laddr hwnd push ebx
+callnexthookex lparam mem wparam push ebx ncode 3 hhk mem
+unhookwindowshookex hhk mem
+getcurrentthreadid
+setwindowshookexa dwthreadid push eax hmod 0 lpfn ptr idhook 5
+unhookwindowshookex hhk push eax test eax eax mov eax mem cmp byte ptr mem 0
+createwindowexa lpparam mem hinstance mem hmenu mem hwndparent mem nheight mem nwidth mem mem x mem dwstyle mem lpwindowname mem lpclassname mem dwexstyle mem
+destroywindow hwnd mem
+defwindowproca lparam mem wparam mem msg mem hwnd mem
+callwindowproca lparam mem wparam mem msg mem hwnd mem lpprevwndfunc push eax
+sendmessagea lparam 0 wparam 0 msg maddr hwnd push eax test eax eax mov eax mem mov eax mem mov esi eax
+getkeystate nvirtkey 1
+getdlgctrlid hwnd push edi test edi edi mov edi eax
+sendmessagea lparam 0 wparam 0 msg 87h hwnd push edi
+getmenuitemcount hmenu mem
+getsubmenu npos push edi xor edi edi hmenu mem
+getmenuitemid void push eax npos push edi call extrfun call extrfun hmenu mem
+getclassinfoa lpwndclass push eax lea eax mem mov esi mem push esi lpclassname mem hinstance mem
+registerclassa lpwndclass push esi
+getcapture
+winhelpa dwdata mem ucommand mem lpszhelp mem hwndmain mem
+getversion
+getdlgctrlid hwnd push ebx mov ebx mem mov esi mem push esi push ebx mov ebp esp push ebp
+getwindowlonga nindex laddr hwnd push esi
+getparent hwnd push esi
+getwindow ucmd 4 hwnd push esi
+getdlgitem niddlgitem mem hdlg mem
+getwindow ucmd 2 hwnd push esi
+sendmessagea void push esi test esi esi mov esi eax int mem int mem cexception mem int16 mem struct cwnd push eax push dword ptr mem test eax eax call extrfun mov esi eax lparam mem wparam mem msg mem hwnd push esi call extrfun call extrfun push esi test esi esi mov esi eax
+getwindow ucmd 2 hwnd push esi
+adjustwindowrectex dwexstyle push eax call extrfun bmenu 0 dwstyle push eax call extrfun push eax call extrfun lprect complex
+getparent hwnd push esi cmp esi mem
+getparent hwnd push edi
+sendmessagea lparam mem wparam mem msg push eax lea eax mem mov esi mem push mem push esi mov ebp esp push ebp hwnd mem
+sendmessagea lparam 0 wparam laddr msg maddr hwnd mem
+dispatchmessagea lpmsg push eax lea eax mem test eax eax
+getobjecta pv push eax lea eax mem test eax eax c saddr h mem
+setbkcolor color mem hdc mem
+getsyscolor nindex 8
+settextcolor color push eax hdc mem
+getparent hwnd mem
+getwindow ucmd 4 hwnd mem
+sendmessagea lparam 0 wparam 0 msg maddr hwnd push edi test edi edi mov edi eax
+getwindowlonga nindex laddr hwnd push edi test edi edi
+copyrect lprcsrc push eax lea eax mem call extrfun push eax lprcdst push eax lea eax mem push eax lea eax mem call extrfun push eax
+getparent hwnd mem
+mapwindowpoints cpoints 2 lppoints push eax lea eax mem hwndto push ebx hwndfrom push edi
+findresourcea lptype 0f0h lpname complex hmodule push esi mov esi mem
+loadresource hresinfo push eax cmp eax edi hmodule push esi
+lockresource hresdata push eax xor eax eax cmp eax edi
+getparent hwnd mem
+peekmessagea wremovemsg push edi cmp complex edi wmsgfiltermax push edi push edi cmp complex edi wmsgfiltermin push edi push edi push edi cmp complex edi hwnd push edi push edi push edi push edi cmp complex edi lpmsg push ebp add ebp saddr mov ebp eax
+sendmessagea lparam mem wparam push edi cmp complex edi cmp complex edi test byte ptr complex 1 mov complex edi msg maddr hwnd complex
+sendmessagea lparam push eax mov eax complex test byte ptr complex 2 wparam push edi msg maddr hwnd mem
+peekmessagea wremovemsg push edi mov complex edi mov complex 1 wmsgfiltermax push edi push edi mov complex edi mov complex 1 wmsgfiltermin push edi push edi push edi mov complex edi mov complex 1 hwnd push edi push edi push edi push edi mov complex edi mov complex 1 lpmsg push ebp
+postmessagea lparam push eax xor eax eax mov mem eax mov eax mem mov mem eax mov eax mem wparam push eax push eax xor eax eax mov mem eax mov eax mem mov mem eax mov eax mem msg push eax push eax push eax xor eax eax mov mem eax mov eax mem mov mem eax mov eax mem hwnd mem
+getmodulehandlea lpmodulename push esi mov esi ptr acomctl32dll0 push esi
+loadlibrarya lplibfilename push esi
+getprocaddress initcommoncontrolsex ptr hmodule push ebx test ebx ebx mov ebx eax
+initcommoncontrols
+initcommoncontrols
+freelibrary hlibmodule push ebx
+getdc hwnd 0
+releasedc hdc push edi hwnd 0
+loadstringa cchbuffermax complex lpbuffer push esi mov esi complex push complex uid complex hinstance push eax mov eax mem
+destroymenu hmenu push eax call extrfun xor eax eax
+getwindowlonga nindex laddr hwnd mem
+getdlgitem niddlgitem 2 hdlg mem
+iswindowenabled hwnd push eax test eax eax
+sendmessagea lparam 0 wparam 2 msg maddr hwnd mem
+getparent int mem buf1 mem int push edi mov edi mem push mem push edi mov ebx mem push ebx mov ebp esp push ebp int push ebx mov ebx mem push ebx mov ebp esp push ebp hwnd mem
+getsystemmetrics nindex 2ah
+globallock hmem mem
+createdialogindirectparama dwinitparam push ebx cmp eax ebx mov eax mem lpdialogfunc ptr hwndparent push eax mov eax mem xor eax eax cmp eax ebx mov eax mem lptemplate mem hinstance mem
+destroywindow hwnd mem
+globalunlock hmem mem
+globalfree hmem mem
+iswindow hwnd mem
+enablewindow benable 1 hwnd mem
+enddialog nresult complex hdlg mem
+findresourcea lptype 5 lpname mem hmodule push ebx mov ebx mem
+loadresource hresinfo push eax hmodule push ebx
+lockresource hresdata push eax test eax eax
+globalalloc dwbytes push eax add eax saddr mov mem eax mov esi ecx push esi mov eax mem uflags 40h
+globallock hmem push eax mov mem eax test eax eax
+globalunlock hmem mem
+globalfree hmem push eax test eax eax mov eax mem
+widechartomultibyte lpmultibytestr push eax cchwidechar laddr lpwidecharstr push esi dwflags 0 codepage 0
+globallock hmem mem
+multibytetowidechar cchwidechar 20h lpwidecharstr push eax lea eax mem cmp mem edi mov mem eax eax saddr mov esi mem mov eax mem mov eax mem mov mem ecx mov ax mem xor ecx ecx mov ebx eax cbmultibyte laddr lpmultibytestr mem dwflags push edi cmp mem edi mov mem eax eax saddr mov esi mem mov eax mem mov eax mem mov mem ecx mov ax mem xor ecx ecx mov ebx eax codepage push edi push edi cmp mem edi mov mem eax eax saddr mov esi mem mov eax mem mov eax mem mov mem ecx mov ax mem xor ecx ecx mov ebx eax
+globalunlock hmem mem
+getobjecta pv push ecx lea ecx mem c 3ch h push eax test eax eax
+getdc hwnd 0
+getdevicecaps index 5ah hdc push esi mov esi eax
+muldiv ndenominator push eax nnumerator 48h nnumber mem
+releasedc hdc push esi hwnd 0
+sendmessagea lparam 0 wparam 0 msg saddr hwnd mem
+getwindowlonga nindex laddr hwnd mem
+getclassnamea nmaxcount saddr lpclassname push eax lea eax mem xor eax eax cmp eax mem eax saddr hwnd mem
+lstrcmpia combobox ptr lpstring1 push eax lea eax mem
+getclassnamea nmaxcount 20h lpclassname push eax lea eax mem mov ebp esp push ebp hwnd mem
+lstrcmpia lpstring2 mem lpstring1 push eax lea eax mem push mem
+clienttoscreen lppoint push eax lea eax mem mov ebp esp push ebp hwnd mem
+getdlgctrlid hwnd push esi test esi esi mov esi eax
+getwindowlonga nindex laddr hwnd push esi
+getwindowrect lprect push eax lea eax mem test eax laddr hwnd push esi
+ptinrect pt mem lprc push eax lea eax mem push mem
+lstrlena lpstring mem
+getwindowtexta nmaxcount push eax cmp esi eax mov eax maddr mov esi eax lpstring push eax lea eax mem push eax cmp esi eax mov eax maddr mov esi eax hwnd mem
+lstrcmpa lpstring2 mem lpstring1 push eax lea eax mem push mem cmp eax esi
+setwindowtexta lpstring mem hwnd mem
+deleteobject ho push eax test eax eax mov eax mem mov esi complex push esi
+globalflags hmem push edi test edi edi mov edi complex push edi
+globalunlock hmem push edi
+globalfree hmem push edi
+deletedc hdc push eax call extrfun
+getstockobject complex
+getclipbox lprect mem hdc mem
+deleteobject ho push eax call extrfun xor eax eax
+sendmessagea lparam push ebx cmp eax ebx call extrfun push ebx push eax lea eax mem call extrfun mov mem edi mov edi ecx xor ebx ebx push edi mov ebp esp push ebp wparam push ebx push ebx cmp eax ebx call extrfun push ebx push eax lea eax mem call extrfun mov mem edi mov edi ecx xor ebx ebx push edi mov ebp esp push ebp msg maddr hwnd mem
+getmodulefilenamea nsize maddr lpfilename push eax lea eax mem hmodule 0
+messageboxa utype push ebx lpcaption push edi lptext mem hwnd mem
+enablewindow benable 1 hwnd mem
+getwindowlonga nindex laddr hwnd push esi test esi esi mov esi mem xor esi esi test eax eax call extrfun
+getlastactivepopup hwnd push esi test esi esi
+iswindowenabled hwnd push edi test edi edi
+enablewindow benable 0 hwnd push edi cmp edi esi
+regsetvalueexa cbdata 4 lpdata push eax lea eax mem mov esi eax dwtype 4 reserved 0 lpvaluename mem hkey push esi test esi esi mov esi eax
+regclosekey hkey push esi
+wsprintfa ptr lpstr push eax lea eax mem push dword ptr mem xor eax eax
+writeprivateprofilestringa lpfilename mem lpstring push eax lea eax mem lpkeyname mem lpappname mem
+getcurrentthread
+getcurrentthreadid
+getcursorpos lppoint push eax lea eax mem mov esi ecx push esi
+getmenucheckmarkdimensions
+createbitmap lpbits push eax lea eax mem dec mem eax inc mem shl eax cl movzx ax byte ptr mem mov eax mem lea edx complex mov mem 5 imul eax esi sar eax 1 mov mem ptr unknown ptr add eax laddr mov eax mem nbitcount 1 nplanes 1 nheight mem nwidth push ebx
+loadbitmapa lpbitmapname laddr hinstance push eax mov hbitmapchecked eax test eax eax
+oleinitialize pvreserved push ebx xor ebx ebx
+cofreeunusedlibraries
+oleuninitialize
+localalloc ubytes complex uflags 40h
+localfree hmem mem
+tlsalloc
+initializecriticalsection lpcriticalsection push eax lea eax mem call extrfun mov mem eax cmp eax laddr
+tlsfree dwtlsindex push eax cmp eax laddr mov eax mem mov esi ecx push esi
+globalhandle pmem push eax test eax eax mov eax mem mov eax edi test edi edi call extrfun mov ecx esi push eax mov edi mem mov eax mem
+globalunlock hmem push edi mov edi eax
+globalfree hmem push edi
+deletecriticalsection lpcriticalsection push esi add esi saddr
+entercriticalsection lpcriticalsection push eax lea eax mem mov esi ecx push esi push ecx
+globalalloc dwbytes push eax shl eax 3 mov eax ebp test eax eax add ebp saddr mov eax mem cmp edi ebp add eax 8 inc edi test byte ptr mem 1 cmp ebp edi pop edi test byte ptr mem 1 mov edi mem mov ebp mem uflags maddr
+globalhandle pmem push eax
+globalunlock hmem push ebx mov ebx eax
+globalrealloc uflags maddr dwbytes push eax shl eax 3 mov eax ebp hmem push ebx
+globalhandle pmem mem
+leavecriticalsection lpcriticalsection complex
+leavecriticalsection lpcriticalsection complex
+entercriticalsection lpcriticalsection push eax lea eax mem mov edi ecx push edi push ecx
+leavecriticalsection lpcriticalsection mem
+tlsgetvalue dwtlsindex mem
+entercriticalsection lpcriticalsection push eax lea eax mem mov edi eax mov dword ptr mem ptr 7cthreaddata 6b test eax eax
+leavecriticalsection lpcriticalsection push eax lea eax mem
+localalloc ubytes push eax shl eax 2 mov eax mem test eax eax mov eax mem uflags 0
+localrealloc uflags 2 ubytes push ecx shl ecx 2 mov ecx mem hmem push eax
+tlssetvalue lptlsvalue push edi dwtlsindex mem
+entercriticalsection lpcriticalsection push edi lea edi mem cmp edi mem inc edi dword ptr mem 0 mov eax mem
+leavecriticalsection lpcriticalsection push edi call extrfun
+localfree hmem mem
+tlssetvalue lptlsvalue 0 dwtlsindex mem
+entercriticalsection lpcriticalsection push ebx lea ebx mem mov esi ecx push esi push ebx
+tlsgetvalue dwtlsindex mem
+leavecriticalsection lpcriticalsection push ebx call extrfun call extrfun
+tlsgetvalue dwtlsindex mem
+regopenkeyexa phkresult push eax samdesired push esi uloptions push edi software ptr hkey laddr
+regcreatekeyexa lpdwdisposition push eax lea eax mem xor eax eax mov edi eax phkresult push eax lea eax mem push eax lea eax mem xor eax eax mov edi eax lpsecurityattributes push esi cmp edi esi mov edi eax samdesired laddr dwoptions push esi push esi cmp edi esi mov edi eax lpclass push esi push esi push esi cmp edi esi mov edi eax reserved push esi push esi push esi push esi cmp edi esi mov edi eax lpsubkey mem hkey push edi cmp edi esi mov edi eax
+regclosekey hkey push edi
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+getversion
+initializecriticalsection lpcriticalsection ptr
+initializecriticalsection lpcriticalsection push eax lea eax mem lea eax mem
+leavecriticalsection lpcriticalsection push ebp
+leavecriticalsection lpcriticalsection push eax lea eax mem lea eax mem mov eax mem
+getversion
+getprocessversion processid push ebx mov mem ebx mov mem eax mov mem ecx mov mem eax cmp eax ebx sub ecx eax xor ebx ebx inc eax pop ecx sbb eax eax mov mem ecx shr ecx saddr mov ecx eax mov mem ecx add ecx edx shl edx 8 movzx ecx cl movzx edx al xor ecx ecx
+freelibrary hlibmodule push esi test esi esi mov esi mem
+getmodulefilenamea nsize push ebx mov ebx maddr lpfilename push eax lea eax mem mov mem eax mov eax mem mov mem eax mov edi eax hmodule mem
+lstrcpya hlp ptr lpstring1 push ebx mov ebx mem cmp mem ebx mov eax mem mov mem eax
+lstrcata ini ptr lpstring1 push eax lea eax mem mov mem eax
+lstrlena lpstring push edi mov edi esi push edi mov esi complex push esi
+lstrcpyna imaxlength complex lpstring2 push edi lpstring1 complex
+coregistermessagefilter lplpmessagefilter 0 lpmessagefilter push eax lea eax mem mov esi ecx push esi
+getoemcp lpcpinfo push eax lea eax mem mov ebp esp push ebp
+getcpinfo codepage push eax
+deletecriticalsection lpcriticalsection push esi add esi saddr call extrfun mov esi ecx push esi mov ecx ptr unknown ptr
+near
+interlockedincrement lpaddend push ecx add ecx 4
+interlockeddecrement lpaddend push eax xor eax eax lea eax mem cmp dword ptr mem 0 mov esi ecx push esi
+dialogfunc lparam mem wparam mem uint push eax cmp mem eax mov eax maddr mov ebp esp push ebp hwnd mem
+sendmessagea lparam 0 wparam laddr msg push eax cmp mem eax mov eax maddr hwnd mem
+near
+oleuibusya lpoleuibusya push eax lea eax mem
+enablewindow benable 1 hwnd mem
+oleiscurrentclipboard pdataobj push eax call extrfun mov esi eax call extrfun push esi
+dispatchmessagea lpmsg push eax lea eax mem
+peekmessagea wremovemsg 2 wmsgfiltermax push eax mov eax mem mov esi ptr unknown ptr push esi wmsgfiltermin push eax push eax mov eax mem mov esi ptr unknown ptr push esi hwnd 0 lpmsg push eax lea eax mem push eax push eax mov eax mem mov esi ptr unknown ptr push esi mov ebp esp push ebp
+near
+near
+peekmessagea wremovemsg push edi cmp mem edi xor edi edi push edi wmsgfiltermax push esi mov esi maddr push esi wmsgfiltermin push esi push esi mov esi maddr push esi hwnd push edi push edi cmp mem edi xor edi edi push edi lpmsg push eax lea eax mem cmp mem 4 cmp mem 1 cmp mem edi xor edi edi push edi mov eax mem mov ebp esp push ebp
+getcurrentthreadid lparam push edi wparam push edi push edi msg push esi
+postthreadmessagea idthread push eax
+peekmessagea wremovemsg 2 wmsgfiltermax push esi cmp mem esi xor esi esi dword ptr mem 0 wmsgfiltermin push esi push esi cmp mem esi xor esi esi dword ptr mem 0 hwnd push esi push esi push esi cmp mem esi xor esi esi dword ptr mem 0 lpmsg push eax lea eax mem pop eax
+postquitmessage nexitcode mem
+closehandle hobject push eax test eax eax mov eax mem mov dword ptr mem ptr 7cwinthread 6b mov mem esi mov esi ecx push esi push ecx
+unregisterclassa hinstance mem lpclassname push esi
+coregistermessagefilter lplpmessagefilter 0 lpmessagefilter 0
+corevokeclassobject dwregister push eax test eax eax mov eax mem cmp byte ptr mem 0 mov esi ecx push esi
+near double mem double mem double 0
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+fword
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+ 5
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 28h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 22h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 28h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 28h
+near
+near
+near
+near
+near
+near
+near 0 30h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near double mem double mem double 0
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 40h
+near
+near
+near
+near
+near
+near x 78h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+far
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 74h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+ 5
+ 5
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near ¨ 0a8h ¨ 0a8h
+near
+near
+near
+near
+near
+near ¨ 0a8h ¨ 0a8h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 20h
+near
+near
+near
+near
+near
+near
+near
+near 20h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 22h e 65h
+near 0 30h
+near
+near 64h
+near
+near
+near
+near
+near
+near
+near 0 30h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 5ch
+near 5ch
+near
+near
+near 2eh
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 20h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near l 4ch
+near
+near
+near l 4ch
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 60h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+fword
+near 64h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 0 30h
+near
+near 20h
+near
+near
+near
+near
+near
+near € 80h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 44h
+near
+near
+near
+near
+near
+near
+near 54h
+near 54h
+near
+near
+fword
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+ 5
+near
+near
+near
+near
+near
+near
+near
+near
+near p 50h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+ 5
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 40h
+near
+near
+near
+near 74h
+near
+near
+near
+near
+near 2ch
+near
+near
+near
+near
+near
+near
+near
+near
+near
+fword
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+ 5
+near
+near
+near
+near 20h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 27h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near z 7ah 61h
+near
+near
+near
+near
+near z 5ah 41h
+near
+near
+near
+near
+near
+near z 7ah 61h
+near
+near
+near
+near
+near z 5ah 41h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 2eh
+near
+near
+near
+near
+near
+near
+fword
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 3ch
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 24h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 2ch
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 3dh
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+ 5
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 7ch
+near
+near
+near
+near
+near h 48h
+near
+near
+near 28h
+near
+near
+near
+near
+near
+near
+near 40h p 50h
+fword
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near h 48h
+near
+near
+near h 48h
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near 2eh
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near int laddr double push eax mov eax laddr test eax eax mov eax mem pop eax mov mem eax int 1
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near int laddr double push eax mov eax laddr test eax eax mov eax dword ptr mem int 1
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+near
+fword
+near
+near
+near
+near
+near
+near
+near
+near 0 30h
+near
+fword
+near
+near
+near
+near
+near
+near
+near
+near 20h
+near
+near
+near
