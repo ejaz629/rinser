@@ -1,0 +1,886 @@
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe.i64' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe.i64' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe.i64' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' -> OK
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe.i64' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe.i64' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' -> OK
+Can't find input file 'C:\Users\Administrator\Desktop\Rinser\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' -> OK
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  8798208  1074 8192 allocating memory for b-tree...
+  8798208  1074 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 17858560            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000425000) ... ... OK
+  1. Creating a new segment  (0000000000425000-000000000042B000) ... ... OK
+  2. Creating a new segment  (000000000042B000-000000000062C000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (00000000004254AC-000000000042B000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 288 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 41C718, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00B65A6A95CC33E21CE21CAA6760F96BC0986613A5B1758EC4D6231ABE09BF94.exe' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+421B4F: propagate_stkargs: function is already typed
+4228E9: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  3588096   438 8192 allocating memory for b-tree...
+  3588096   438 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+  7438336            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-000000000040A000) ... ... OK
+  1. Creating a new segment  (000000000040A000-000000000040D000) ... ... OK
+  2. Creating a new segment  (000000000040D000-000000000045A000) ... ... OK
+Reading imports directory...
+Applying fixups...
+  3. Creating a new segment  (000000000040A170-000000000040D000) ... ... OK
+The input file was linked with debug information
+ and the symbol filename is:
+"f:\软件工程\驱动编程\OK\KernelYK\bin\InstallSYS.pdb"
+Do you want to look for this file at the specified path
+and the Microsoft Symbol Server?
+ -> ~Y~es
+PDB: using PDBIDA provider
+PDB: downloading http://msdl.microsoft.com/download/symbols/InstallSYS.pdb/FB7EBE9B303147A19C190E34424FEEA81/InstallSYS.pdb => C:\Users\ADMINI~1\AppData\Local\Temp\2\ida\InstallSYS.pdb\FB7EBE9B303147A19C190E34424FEEA81\InstallSYS.pdb
+Could not find PDB file 'InstallSYS.pdb'.
+Please check _NT_SYMBOL_PATH
+C:\Users\....\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F: failed to load pdb info.
+
+Do you want to browse for the pdb file on disk? -> ~Y~es
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 89 names.
+main() function at 401C30, named "_wWinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00EC7DD43BDA9F19B6A86D9F6B82FA2305D14F8C5FF5E7A557F5746F99C3C31F' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Propagating type information...
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+   524288    64 8192 allocating memory for b-tree...
+   131072    16 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+   917504            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000402000) ... ... OK
+  1. Creating a new segment  (0000000000402000-0000000000403000) ... ... OK
+  2. Creating a new segment  (0000000000403000-0000000000404000) ... ... OK
+  3. Creating a new segment  (0000000000404000-0000000000409000) ... ... OK
+  4. Creating a new segment  (0000000000409000-000000000040A000) ... ... OK
+  5. Creating a new segment  (000000000040A000-000000000040D000) ... ... OK
+  6. Creating a new segment  (000000000040D000-000000000040E000) ... ... OK
+Reading imports directory...
+  7. Creating a new segment  (0000000000409100-000000000040A000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 64 names.
+main() function at 404C20, named "_main"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00EC92B171C50FC7F78B787CE2B441CC2C753D662E25E7D5FCC05E4675BAD287' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Propagating type information...
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+  1409024   172 8192 allocating memory for b-tree...
+  1409024   172 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+  3080192            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-0000000000448000) ... ... OK
+  1. Creating a new segment  (0000000000448000-0000000000457000) ... ... OK
+  2. Creating a new segment  (0000000000457000-0000000000458000) ... ... OK
+  3. Creating a new segment  (0000000000458000-000000000045A000) ... ... OK
+Reading imports directory...
+  4. Creating a new segment  (0000000000441448-0000000000448000) ... ... OK
+The imports segment seems to be destroyed. This MAY mean that
+the file was packed or otherwise modified in order to make it
+more difficult to analyze. If you want to see the imports
+segment in the original form, please reload it with the
+'make imports section' checkbox cleared. -> OK
+  5. Creating a new segment  (0000000000441000-0000000000441448) ... ... OK
+Assuming __cdecl calling convention by default
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 228 names.
+Plan  FLIRT signature: SEH for vc7-14
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00F1EA0C90EB9F82D75795B62DA7C13CB3287B8130C98E611F13C9EDB3398D89' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: SEH for vc7-14
+Propagating type information...
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
+Possible file format: MS-DOS executable (EXE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\dos64.dll)
+Possible file format: Portable executable for 80386 (PE) (C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\loaders\pe64.dll)
+
+  bytes   pages size description
+--------- ----- ---- --------------------------------------------
+ 18202624  2222 8192 allocating memory for b-tree...
+ 18202624  2222 8192 allocating memory for virtual array...
+   262144    32 8192 allocating memory for name pointers...
+-----------------------------------------------------------------
+ 36667392            total memory allocated
+
+Loading file 'C:\Users\Administrator\Desktop\Rinser\binaries\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' into database...
+Detected file format: Portable executable for 80386 (PE)
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pic1664.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\riscv64.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\rl7864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\s39064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\spc70064.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\tms3202864.dll' is prohibited by the key
+The processor module 'C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\unsp64.dll' is prohibited by the key
+Loading processor module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll for metapc...Initializing processor module metapc...OK
+Autoanalysis subsystem has been initialized.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+  0. Creating a new segment  (0000000000401000-000000000041C000) ... ... OK
+  1. Creating a new segment  (000000000041C000-0000000000421000) ... ... OK
+  2. Creating a new segment  (0000000000421000-0000000000448000) ... ... OK
+Reading imports directory...
+  3. Creating a new segment  (000000000041C418-0000000000421000) ... ... OK
+Plan  FLIRT signature: Microsoft VisualC 2-14/net runtime
+autoload.cfg: vc32rtf.sig autoloads mssdk_win7.til
+Type library 'mssdk_win7' loaded. Applying types...
+Types applied to 255 names.
+Plan  FLIRT signature: MFC 3.1-14.0 32bit
+autoload.cfg: vc32mfc.sig autoloads mssdk_win7.til
+main() function at 413F94, named "_WinMain@16"
+Marking typical code sequences...
+Flushing buffers, please wait...ok
+File 'C:\Users\Administrator\Desktop\Rinser\binaries\00F1F85AE06E363F2CEEB59D8E5E13DB2D605F9708169DA649C70D815FC89E62' has been successfully loaded into the database.
+C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\plugins\findcrypt3.py: No module named 'yara'
+Traceback (most recent call last):
+  File "C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\python\3\ida_idaapi.py", line 616, in IDAPython_ExecScript
+    exec(code, g)
+  File "C:/Users/Administrator/Desktop/Rinser/IDA Pro 7.6 modified/ida76sp1/plugins/findcrypt3.py", line 9, in <module>
+    import yara
+ModuleNotFoundError: No module named 'yara'
+
+IDA is analysing the input file...
+You may start to explore the input file right now.
+Using FLIRT signature: Microsoft VisualC 2-14/net runtime
+Using FLIRT signature: MFC 3.1-14.0 32bit
+Propagating type information...
+404D60: propagate_stkargs: function is already typed
+41930A: propagate_stkargs: function is already typed
+419BC7: propagate_stkargs: function is already typed
+419C89: propagate_stkargs: function is already typed
+Function argument information has been propagated
+lumina: connect: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.
+The initial autoanalysis has been finished.
+Flushing buffers, please wait...ok
+Unloading IDP module C:\Users\Administrator\Desktop\Rinser\IDA Pro 7.6 modified\ida76sp1\procs\pc64.dll...
