@@ -1,1 +1,1 @@
-Please copy your IDA-Pro to this folder and add path to the main Rinser folder.
+Please copy your IDA-Pro folder here or I think a goo idea is to the add path of IDA-Pro to the main folfer of Rinser.
