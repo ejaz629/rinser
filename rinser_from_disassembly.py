@@ -1,57 +1,44 @@
-
-
 from functions import *
 
-
+directory = r"disassembly"
 func_limit = 0
 sample_limit = 3000
 api_fp = []
 funcs_apis = []
-
 regs = ['eax', 'esp', 'ecx', 'ebp', 'ebx', 'edx', 'esi', 'edi']
-directory = r"disassembly"
 count = 1
 file_sizes = []
 
-
 for filename in os.listdir(directory):
     sample = os.path.join(directory, filename)
-
     track = False  
     print(sample)
     try:
         data = pd.read_csv(sample, sep=r" : ", skiprows=2, encoding="cp1252", header=None, index_col=False)[
-           :-2]  # error_bad_lines=False,   C:\Users\ahm038\Dropbox\My PC (FTYPE-EP)\Desktop\Malware research\dataset\pre-processed_upx_unpacked         # F:\source\IDA-processed\unpacked-preprocessed\1A2F794E6C70005C3277D563F9EE45856C1264248058A96C6469C42721422586.txt
+           :-2]  
     except:
         pass
-
     print([count, 'extracting features...'])
     data.drop(data.tail(2).index, inplace=True)  # drop last n rows
-
     funcslist = list(data[0].unique())
     funs = 0
-
     for f in funcslist:
         df = data[data[0] == f]
         preprocess_process(count, filename, f, df, data)
         funs += 1
         if funs == func_limit:
             break
-
     count += 1
     # if count == 2:
     #     break
 
-
-print("Done first part")
+print("JSON formated file for the disassembly generated!")
 
 hits = 0
 api_count = 0
 numparemeters = 0
 apilist = []
-
 directory = r"api-codeprints"
-
 for filename in os.listdir(directory):
     sample = os.path.join(directory, filename)
     if os.path.isfile(sample):
