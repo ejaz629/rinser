@@ -1,6 +1,6 @@
 from functions import *
 p_LIMIT=0
-directory = r"C:\Users\ahm038\PycharmProjects\asmbert\data"
+directory = r"api-codeprints"
 tokenizer, model, fill_mask, nlp_features = load_llm()
 
 with open('full_ds_params_unique.txt', 'r') as f:
