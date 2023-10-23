@@ -2,6 +2,11 @@ import re
 import pandas as pd
 from tqdm import tqdm
 import os
+from transformers import *
+from tokenizers import *
+from numpy import dot
+import numpy as np
+from numpy.linalg import norm
 import json
 import warnings
 import json
@@ -10,13 +15,15 @@ import re
 import string
 import nltk
 import math
+
 nltk.download('punkt')
 from nltk.corpus import stopwords
-nltk.download('stopwords')
+# nltk.download('punkt')
+from nltk.corpus import stopwords
 from nltk import sent_tokenize
 from nltk.tokenize import word_tokenize
-warnings.filterwarnings("ignore")
 
+warnings.filterwarnings("ignore")
 
 regs = ['eax', 'esp', 'ecx', 'ebp', 'ebx', 'edx', 'esi', 'edi']
 
@@ -201,12 +208,14 @@ def preprocess_process(count, sam, fname, df, data):
                 instr_set = []
             else:
                 instr_set.append(row[2])
+
+
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', None)
-pd.set_option('display.max_colwidth', -1)
 
 
+# pd.set_option('display.max_colwidth', -1)
 
 
 def ishex(s):
@@ -326,3 +335,140 @@ def cleandata(text):
 def append_record1(record):
     with open('api-codeprints-for-llm/test_for_rinser_llm.txt', 'a', newline="", encoding="utf-8") as f:
         f.write(cleandata(' '.join(record).rstrip()) + os.linesep)
+
+
+def predict_api(test_api, fill_mask):
+    corr = False
+    contxt_res = False
+    valid_input = True
+    actual = test_api[0]
+    predicted = None
+    example = "[MASK] " + ' '.join(test_api[1:])
+    try:
+        out = fill_mask(example)
+    except RuntimeError:
+        valid_input = False
+        return actual, predicted, corr, contxt_res, valid_input
+
+    for prediction in out:
+        predicted = prediction["token_str"]
+        if actual == predicted:
+            corr = True
+            break
+    return actual, predicted, corr, contxt_res, valid_input
+
+
+def get_cos_sim(nlp_features, gt_api, predicted_api):
+    output = nlp_features(gt_api)
+    d = np.array(output)  # (Samples, Tokens, Vector Size)
+    gt_api_bert = d[0].mean(axis=0)
+
+    output = nlp_features(predicted_api)
+    d = np.array(output)  # (Samples, Tokens, Vector Size)
+    pred_api_bert = d[0].mean(axis=0)
+    cos_sim = dot(pred_api_bert, gt_api_bert) / (norm(pred_api_bert) * norm(gt_api_bert))
+
+    return cos_sim, gt_api_bert, pred_api_bert
+
+
+def load_llm():
+    tokenizer = BertTokenizerFast.from_pretrained(r'rinser-llm',
+                                                  config=AutoConfig.from_pretrained(r'rinser-llm/checkpoint-28700'))
+
+    # # model = BertForMaskedLM.from_pretrained(r'fine-tuned_for_non_annot_full_ds/checkpoint-25000')
+    # # fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
+    # #
+    # # model = BertModel.from_pretrained(r'fine-tuned_for_non_annot_full_ds/checkpoint-25000')
+    # # nlp_features = pipeline("feature-extraction", model=model, tokenizer=tokenizer)
+    #
+
+    model = BertForMaskedLM.from_pretrained(r'rinser-llm/checkpoint-28700/')
+    fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
+    # model = BertModel.from_pretrained(r'rinser-llm/checkpoint-28700/')
+    nlp_features = pipeline("feature-extraction", model=model, tokenizer=tokenizer)
+
+    return tokenizer, model, fill_mask, nlp_features
+
+
+def get_codeprint(uni_params, api):
+    api_fp = 0
+    numparemeters = 0
+    api_n = api["api_name"]
+    if 'dword' in api_n or 'sub_' in api_n or api_n in regs:  # and '?' not in api_n and '_' not in api_n and '@' not in api_n and 'eax' not in api_n and 'ecx' not in api_n and 'edi' not in api_n and 'edx' not in api_n and 'ebp' not in api_n and 'esp' not in api_n and 'ebx' not in api_n and 'esi' not in api_n:
+        if 'ds:' in api_n:
+            api_n = api_n.split(':')[1:]
+            api_n = ' '.join(api_n)
+
+        # api_fp.append(api_n)
+        if len(api['params']) > 0:
+            api_fp = []
+            for p in api['params']:
+                if p['p_annot'] in uni_params:
+                    numparemeters += 1
+                    if p['tracked_code']:
+                        instrs = []
+                        for instr in p['tracked_code']:
+                            sstr = re.sub(' +', ' ', instr)
+                            if 'sub_' in sstr:
+                                f_call = sstr[:len('sub_')] + ' extrfun'
+                                instrs.append(f_call)
+                            elif 'dword_' in sstr:
+                                l = sstr.split(' ')
+                                sstr = [sstr.replace(s, 'ptr') for i, s in enumerate(l) if 'dword_' in s.strip()]
+                                instrs.append(' '.join(sstr))
+                            else:
+                                cr_inst = []
+                                inst = sstr.split(';')[0]
+                                inst_ = inst.split(' ')
+                                cr_inst.append(inst_[0])
+                                for par in inst_[1:]:
+                                    val = par
+                                    p_type = identify_parameter_type(par, regs)
+                                    val = getnormalizedvalue(p_type, val)
+                                    cr_inst.append(val)
+                                instrs.append(' '.join(cr_inst))
+                        rec = [p["p_annot"]]  # , ' '.join(instrs)]
+                        api_fp.append(' '.join(rec))
+                    else:
+                        par = p["p_val"]
+                        p_type = identify_parameter_type(par, regs)
+                        val = normalizefixedparam(p_type, par, p)
+                        rec = [p["p_annot"], val]
+                        api_fp.append(' '.join(rec))
+            if numparemeters > 0:
+                api_fp.insert(0, str(numparemeters))  # only for testset with annot and code
+                # append_record(api_fp, api["sample"])
+                # print(api_n, api_fp, api["sample"])
+    return api_fp
+
+
+def get_gt_api(api_db, api_fp):
+    gt_api = None
+    tmp = None
+    extracted_parameters_list = []
+    codeprint = api_fp[1:]
+    for p in codeprint:
+        extracted_parameters_list.append(p.split(" ")[0])
+    for k, v in api_db.items():
+        # c_list = list(set(list(data[ind].split(' '))) & set(v["params"]))
+        c_list = list(set(extracted_parameters_list) & set(v["params"]))
+        if c_list:
+            l_clist = len(c_list)
+            if tmp is None:
+                tmp = l_clist
+                gt_api = k
+                continue
+            if tmp < l_clist:
+                tmp = l_clist
+                gt_api = k
+    return gt_api
+
+
+def model_prediction(out, api_db):
+    predicted_api = None
+    for prediction in out:
+        if prediction["token_str"] not in api_db:
+            continue
+        predicted_api = prediction["token_str"]
+        break
+    return predicted_api
