@@ -171,8 +171,10 @@ trainer = Trainer(
 )
 
 # train the model
+trainer.train()
 
-trainer.train(resume_from_checkpoint=True)
+#finetuning from last checkpoint.
+#trainer.train(resume_from_checkpoint=True)
 
 # # when you load from pretrained, provide the right checkpoint in the below line
 # model = BertForMaskedLM.from_pretrained(os.path.join(model_path, "checkpoint-XXXX"))
