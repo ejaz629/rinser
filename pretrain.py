@@ -5,46 +5,13 @@ import os
 import json
 import ast
 
-
-#tokenizer = AutoTokenizer.from_pretrained(r'D:/work/myworkspace/asmbert/pretrained-bert/')
-#model = DistilBertForSequenceClassification.from_pretrained(r'D:/work/myworkspace/asmbert/pretrained-bert/')
-
-#
-# # when you load from pretrained
-# # model = BertForMaskedLM.from_pretrained(os.path.join(r'D:/work/myworkspace/asmbert/pretrained-bert/checkpoint-500'))
-# # tokenizer = BertTokenizerFast.from_pretrained(r'D:/work/myworkspace/asmbert/pretrained-bert/')
-#
-# model = BertForMaskedLM.from_pretrained(os.path.join(r'D:/work/myworkspace/cppbert/cppbert/'))
-# tokenizer = BertTokenizerFast.from_pretrained(r'D:/work/myworkspace/cppbert/cppbert')
-#
-# fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
-#
-# # perform predictions
-# example = "void main [MASK]"   #getosfhandle filehandle
-# for prediction in fill_mask(example):
-#   print(prediction)
-#   print("here")
-# #
-# # # perform predictions
-# # examples = [
-# #   "fileno [MASK]", #fileno stream
-# #   "writefile hfile lpbuffer nnumberofbytestowrite [MASK] lpoverlapped",
-# # ]
-# # for example in examples:
-# #   for prediction in fill_mask(example):
-# #     print(f"{prediction['sequence']}, confidence: {prediction['score']}")
-# #   print("="*50)
-# #
-
-dataset = load_dataset('text', data_files={'train': [r"train_non_annot.txt"]}, encoding = "ISO-8859-1", split="train")
+dataset = load_dataset('text', data_files={'train': [r"train_with_annot.txt"]}, encoding = "ISO-8859-1", split="train")
 
 print(len(dataset))
 
 # split the dataset into training (90%) and testing (10%)
 d = dataset.train_test_split(test_size=0.1)
 d["train"], d["test"]
-
-
 
 for t in d["train"]["text"][:10]:
   print(t)
@@ -79,7 +46,7 @@ tokenizer.train(files=files, vocab_size=vocab_size, special_tokens=special_token
 # enable truncation up to the maximum 512 tokens
 tokenizer.enable_truncation(max_length=max_length)
 
-model_path = "pretrained-bert_non_annot"
+model_path = "pretrained-bert_with_annot"
 # make the directory if not already there
 if not os.path.isdir(model_path):
   os.mkdir(model_path)
@@ -169,9 +136,10 @@ len(train_dataset), len(test_dataset)
 
 # initialize the model with the config
 model_config = BertConfig(vocab_size=vocab_size, max_position_embeddings=max_length)
-#model = BertForMaskedLM(config=model_config)
+model = BertForMaskedLM(config=model_config)
 
-model = BertForMaskedLM.from_pretrained(os.path.join(r'pretrained-bert_non_annot/checkpoint-15200'))
+# for finetunetuning, uncomment the following line and provide the correct checkpoint folder
+#model = BertForMaskedLM.from_pretrained(os.path.join(r'pretrained-bert_with_annot/checkpoint-XXXXXX'))
 
 # initialize the data collator, randomly masking 20% (default is 15%) of the tokens for the Masked Language
 # Modeling (MLM) task
@@ -188,7 +156,7 @@ training_args = TrainingArguments(
     gradient_accumulation_steps=8,  # accumulating the gradients before updating the weights
     per_device_eval_batch_size=64,  # evaluation batch size
     logging_steps=1000,             # evaluate, log and save model checkpoints every 1000 step
-    save_steps=100,
+    save_steps=1000,
     # load_best_model_at_end=True,  # whether to load the best model (in terms of loss) at the end of training
     # save_total_limit=3,           # whether you don't have much space so you let only 3 model weights saved in the disk
 )
@@ -206,8 +174,8 @@ trainer = Trainer(
 
 trainer.train(resume_from_checkpoint=True)
 
-# # when you load from pretrained
-# model = BertForMaskedLM.from_pretrained(os.path.join(model_path, "checkpoint-6000"))
+# # when you load from pretrained, provide the right checkpoint in the below line
+# model = BertForMaskedLM.from_pretrained(os.path.join(model_path, "checkpoint-XXXX"))
 # tokenizer = BertTokenizerFast.from_pretrained(model_path)
 # # or simply use pipeline
 # fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
