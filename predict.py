@@ -6,15 +6,17 @@ import json
 import ast
 import torch
 
+
+model = BertForMaskedLM.from_pretrained(os.path.join(r'rinser-llm/checkpoint-28700'))
+tokenizer = BertTokenizerFast.from_pretrained(r'rinser-llm')
+fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
+
 apilist = []
 count = 0
 cor = 0
 cor_context = 0
 tot_count = 0
 
-model = BertForMaskedLM.from_pretrained(os.path.join(r'rinser-llm/checkpoint-28700'))
-tokenizer = BertTokenizerFast.from_pretrained(r'rinser-llm')
-fill_mask = pipeline("fill-mask", model=model, tokenizer=tokenizer)
 
 def predict_api(test_api, fill_mask):
     corr = False
@@ -33,10 +35,12 @@ def predict_api(test_api, fill_mask):
         predicted = prediction["token_str"]
         if actual == predicted:
             corr = True
-            break
+        break
     return actual, predicted, corr, contxt_res, valid_input
 
-with open(r'api-codeprints-for-llm/test_for_rinser_llm.txt', "r", encoding="utf8") as f:
+
+
+with open(r'api-codeprints-for-llm/test_apicodeprints_for_llm.txt', "r", encoding="utf8") as f:
     for line in f:
         corr = False
         line = line.strip()
@@ -46,7 +50,22 @@ with open(r'api-codeprints-for-llm/test_for_rinser_llm.txt', "r", encoding="utf8
         if len(t_ex) <= 600 and len(t_ex) > 1:
             test_api = t_ex
             actual, predicted, corr, context_res, valid_input = predict_api(test_api, fill_mask)
-            print("Actual: ", actual+"\n", "Predicted: "+ predicted+"\n", "API context: ", str("[MASKED] ")+' '.join(t_ex[1:]))
+            try:
+                contx = ' '.join(t_ex[1:])
+            except:
+                contx = "not catched"
+                pass
+                    
+            
+            print(count)
+            print("Actual: ", {actual})
+            print("Predicted: ",{predicted})
+            #print("API context: ",{contx})
+            try:
+                print("Prediction accuracy (%): ", cor / count)
+            except:
+                pass
+            print("Unique APIs: ", len(set(apilist)))
             print("================================================================================================================")
             if not valid_input:
                 continue
@@ -57,11 +76,12 @@ with open(r'api-codeprints-for-llm/test_for_rinser_llm.txt', "r", encoding="utf8
                 apilist.append(actual)
                 cor_context += 1
             count += 1
-        if tot_count == 100:
-            break
+        #if tot_count == 10:
+         #   break
 
 print("Total instances: ", tot_count)
 print("Test API codeprints: ", count)
 print("Correct predictions: ", cor)
 print("Prediction accuracy (%): ", cor / count)
 print("Total unique APIs predicted correctly: ", len(set(apilist)))
+

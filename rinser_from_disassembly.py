@@ -46,7 +46,6 @@ for filename in os.listdir(directory):
         for line in open(sample, 'r'):
             api = json.loads(line)
             api_n = api["api_name"]
-
             if 'dword' not in api_n and '?' not in api_n and '_' not in api_n and '@' not in api_n and 'eax' not in api_n and 'ecx' not in api_n \
                     and 'edi' not in api_n and 'edx' not in api_n and 'ebp' not in api_n and 'esp' not in api_n and 'ebx' not in api_n and 'esi' not in api_n:
                 api_count += 1
