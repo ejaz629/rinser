@@ -1,0 +1,3 @@
+please download the pretrained and fine-tuned models from the following link and create a folder in the root folder with name "rinser-llm" and extract content there:
+
+https://www.dropbox.com/s/c76yd0cbd2vcuul/rinser-llm.zip?dl=0
